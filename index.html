@@ -8,72 +8,64 @@
 </head>
 <body>
   <!-- Navigation -->
-  <header class="hero">
-    <nav class="navbar">
-      <h1 class="logo">Billy Chan</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <!-- Extra pages example:
-             <li><a href="projects.html">Projects</a></li>
-             <li><a href="blog.html">Blog</a></li>
-        -->
-      </ul>
-    </nav>
+  <nav class="navbar">
+    <h1 class="logo">Billy Chan</h1>
+    <ul class="nav-links">
+      <li><a href="#intro">Home</a></li>
+      <li><a href="#translation">Translation</a></li>
+      <li><a href="#development">Development</a></li>
+      <li><a href="#modelling">3D Modelling</a></li>
+      <li><a href="#photography">Photography</a></li>
+      <!-- Example extra pages:
+           <li><a href="projects.html">Projects</a></li>
+           <li><a href="resume.html">Resume</a></li>
+      -->
+    </ul>
+  </nav>
 
-    <div class="hero-content">
-      <h2 class="fade-in">Hey! I'm Billy.</h2>
-      <p class="fade-in delay1">Welcome to my portfolio</p>
-      <p class="fade-in delay2">Also known as <strong>Channers</strong> or <strong>unknown_games</strong> on Discord, and <strong>VexorianDev</strong> / <strong>BiLLYGeGe2</strong> on Roblox.</p>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container hidden">
-      <h2>About Me</h2>
-      <p>Hello! Billy, a 16-year-old designer, developer, and translator based in Ireland. I work across Chinese-English translation and localisation, UI/UX design, programming, 3D CAD modelling, and photography – combining creative and technical skills to produce clear, user-focused digital work.</p>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section alt-bg">
-    <div class="container hidden">
-      <h2>Skills & Expertise</h2>
-      
-      <div class="skills-grid">
-        <div class="skill-card hidden">
-          <h3>🌐 Translation & Localisation</h3>
-          <p>Proficient in English and Mandarin Chinese. Localisation for games, apps, websites, and UI content. Projects include Discord bots and video games, with focus on tone, consistency, and layout-fit.</p>
-        </div>
-
-        <div class="skill-card hidden">
-          <h3>🖥️ Development</h3>
-          <p>Roblox Studio: scripting, UI design, complex mechanics, vehicles, and phone GUI systems. Experienced in creating intuitive user interfaces.</p>
-        </div>
-
-        <div class="skill-card hidden">
-          <h3>🧊 3D Modelling & CAD</h3>
-          <p>SolidWorks: mechanical parts, assemblies, technical drawings. Blender: low-poly game assets and mesh optimisation.</p>
-        </div>
-
-        <div class="skill-card hidden">
-          <h3>📸 Photography</h3>
-          <p>Amateur street photography using Sony CyberShot DSC-RX100 Mark I, focusing on emergency service units and urban/rural life.</p>
-        </div>
+  <!-- Horizontal Scroll Wrapper -->
+  <main class="scroll-container">
+    <!-- Intro -->
+    <section id="intro" class="panel">
+      <div class="content">
+        <h2>Hey! I'm Billy.</h2>
+        <p>Welcome to my portfolio.</p>
+        <p>Also known as <strong>Channers</strong> or <strong>unknown_games</strong> on Discord, and <strong>VexorianDev</strong> / <strong>BiLLYGeGe2</strong> on Roblox.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container hidden">
-      <h2>Contact Me</h2>
-      <p>Get in touch via email or social media.</p>
-      <a href="mailto:billy@example.com" class="btn">Email Me</a>
-    </div>
-  </section>
+    <!-- Translation -->
+    <section id="translation" class="panel alt-bg">
+      <div class="content">
+        <h2>🌐 Translation & Localisation</h2>
+        <p>I’m proficient in English and Mandarin Chinese, specialising in localisation for games, apps, and UI content. I translate projects like websites, Discord bots, and video games — focusing on tone, clarity, and visual fit.</p>
+      </div>
+    </section>
+
+    <!-- Development -->
+    <section id="development" class="panel">
+      <div class="content">
+        <h2>🖥️ Development</h2>
+        <p>In Roblox Studio, I script and design user interfaces for interactive systems — from vehicle controls to phone GUIs. I focus on usability and clean, efficient code to make gameplay intuitive and responsive.</p>
+      </div>
+    </section>
+
+    <!-- 3D Modelling -->
+    <section id="modelling" class="panel alt-bg">
+      <div class="content">
+        <h2>🧊 3D Modelling & CAD</h2>
+        <p>I design mechanical parts, assemblies, and technical drawings using SolidWorks. I also create low-poly assets in Blender, balancing function and efficiency for real-time applications.</p>
+      </div>
+    </section>
+
+    <!-- Photography -->
+    <section id="photography" class="panel">
+      <div class="content">
+        <h2>📸 Photography</h2>
+        <p>As a street photographer, I use a Sony CyberShot DSC-RX100 Mark I to capture moments of urban and rural life — focusing on emergency service units and public spaces.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Billy Chan</p>
