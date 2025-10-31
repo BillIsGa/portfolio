@@ -3,90 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Billy Chan | Portfolio</title>
+  <title>Billy | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HERO / LANDING SECTION -->
-  <section id="hero" class="panel">
-    <div class="content">
-      <h1 class="hero-title">Hey! I'm Billy</h1>
-      <p class="hero-sub">Designer • Developer • Translator</p>
-      <p class="hero-desc">
-        Also known as <strong>Channers</strong> / <strong>unknown_games</strong> on Discord and
-        <strong>VexorianDev</strong> / <strong>BiLLYGeGe2</strong> on Roblox.
-      </p>
-      <div class="scroll-indicator"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <h1 class="logo">Billy</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#translation">Translation</a></li>
+        <li><a href="#development">Development</a></li>
+        <li><a href="#modelling">3D Modelling</a></li>
+        <li><a href="#photography">Photography</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="section hero">
+    <div class="content fade-in">
+      <h2>Hey! I'm Billy.</h2>
+      <p>Designer, developer, and translator based in Ireland.</p>
+      <button class="learn-btn" data-modal="about-modal">Learn More</button>
     </div>
+    <img src="assets/hero.png" alt="Hero Image" class="hero-img fade-in-delay">
   </section>
 
-  <!-- ABOUT ME -->
-  <section id="about" class="panel">
-    <div class="content">
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="content fade-in">
       <h2>About Me</h2>
-      <p>
-        I'm a 16-year-old designer, developer, and translator based in Ireland. I combine
-        creative and technical skills across translation, UI/UX, 3D modelling, programming, and photography.
-      </p>
+      <p>I'm a 16-year-old creative specialising in localisation, UI/UX, programming, CAD, and photography — combining technical precision with design clarity.</p>
+      <button class="learn-btn" data-modal="about-modal">Learn More</button>
     </div>
+    <img src="assets/about.png" alt="About Image" class="side-img fade-in-delay">
   </section>
 
-  <!-- TRANSLATION -->
-  <section id="translation" class="panel">
-    <div class="content">
-      <h2>🌐 Translation & Localisation</h2>
-      <p>
-        I work in English and Mandarin Chinese, localising games, apps, and UI content.
-        I focus on tone, accuracy, and layout consistency.
-      </p>
-      <button class="learn-more" data-section="translation">Learn More</button>
-      <div class="expanded-content" id="translation-expanded">
-        <p>Example projects: websites, Discord bots, video games. Expanded content here.</p>
-      </div>
+  <!-- Translation Section -->
+  <section id="translation" class="section translation">
+    <div class="content fade-in">
+      <h2>Translation & Localisation</h2>
+      <p>Fluent in English and Mandarin. I translate and localise UI content, websites, and games with tone, layout, and precision.</p>
+      <button class="learn-btn" data-modal="translation-modal">View Projects</button>
     </div>
+    <img src="assets/translation.png" alt="Translation Image" class="side-img fade-in-delay">
   </section>
 
-  <!-- DEVELOPMENT -->
-  <section id="development" class="panel">
-    <div class="content">
-      <h2>🖥️ Development</h2>
-      <p>
-        Roblox Studio: scripting, UI design, vehicles, phone GUIs, and gameplay systems.
-      </p>
-      <button class="learn-more" data-section="development">Learn More</button>
-      <div class="expanded-content" id="development-expanded">
-        <p>Expanded examples: UI/UX screenshots, code snippets, gameplay demos.</p>
-      </div>
+  <!-- Development Section -->
+  <section id="development" class="section development">
+    <div class="content fade-in">
+      <h2>Development</h2>
+      <p>Roblox scripting, UI systems, and full tool frameworks. Focused on immersive interaction and functional clarity.</p>
+      <button class="learn-btn" data-modal="dev-modal">Learn More</button>
     </div>
+    <img src="assets/development.png" alt="Development Image" class="side-img fade-in-delay">
   </section>
 
-  <!-- 3D MODELLING -->
-  <section id="modelling" class="panel">
-    <div class="content">
-      <h2>🧊 3D Modelling & CAD</h2>
-      <p>
-        SolidWorks parts and assemblies; Blender low-poly game assets; focus on optimisation.
-      </p>
-      <button class="learn-more" data-section="modelling">Learn More</button>
-      <div class="expanded-content" id="modelling-expanded">
-        <p>Expanded content: CAD screenshots, Blender renders, meshes.</p>
-      </div>
+  <!-- 3D Modelling Section -->
+  <section id="modelling" class="section modelling">
+    <div class="content fade-in">
+      <h2>3D Modelling</h2>
+      <p>SolidWorks and Blender modelling for mechanical assemblies and game-ready assets with efficiency and precision.</p>
+      <button class="learn-btn" data-modal="model-modal">View Models</button>
     </div>
+    <img src="assets/modelling.png" alt="3D Model" class="side-img fade-in-delay">
   </section>
 
-  <!-- PHOTOGRAPHY -->
-  <section id="photography" class="panel">
-    <div class="content">
-      <h2>📸 Photography</h2>
-      <p>
-        Amateur street photographer documenting emergency services and daily life in Ireland.
-      </p>
-      <button class="learn-more" data-section="photography">Learn More</button>
-      <div class="expanded-content" id="photography-expanded">
-        <p>Expanded gallery: photos, locations, camera settings.</p>
-      </div>
+  <!-- Photography Section -->
+  <section id="photography" class="section photography">
+    <div class="content fade-in">
+      <h2>Photography</h2>
+      <p>Urban and rural photography using a Sony CyberShot RX100 — focusing on emergency services and street scenes.</p>
+      <button class="learn-btn" data-modal="photo-modal">View Gallery</button>
     </div>
+    <img src="assets/photography.png" alt="Photography Image" class="side-img fade-in-delay">
   </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Billy. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Example Modal Template -->
+  <div id="about-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>About Me</h3>
+      <p>More in-depth information can go here — skills, background, and experience details.</p>
+    </div>
+  </div>
+
+  <div id="translation-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Translation & Localisation Projects</h3>
+      <p>Details about specific projects, screenshots, and workflows.</p>
+    </div>
+  </div>
+
+  <!-- (Add more modals as needed) -->
+  <!-- You could also link to external pages here if desired. -->
 
   <script src="script.js"></script>
 </body>
