@@ -1,3 +1,4 @@
+/* Global */
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +6,68 @@
 }
 
 html, body {
-  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
-  color: #fff;
   background: #323232;
+  color: #f2f2f2;
+  scroll-behavior: smooth;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+#intro {
+  background: radial-gradient(circle at 30% 30%, #3a3a3a, #1e1e1e);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Moving light effect */
+#intro::before {
+  content: "";
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(0,188,212,0.15) 0%, transparent 70%);
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translate(-40%, -50%) scale(1); }
+  to { transform: translate(-60%, -45%) scale(1.2); }
+}
+
+.hero-name {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #00bcd4;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards 0.5s;
+}
+
+.hero-sub {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  margin-top: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards 1s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Navbar */
@@ -22,7 +81,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
 }
 
 .logo {
@@ -38,7 +97,7 @@ html, body {
 }
 
 .nav-links a {
-  color: #fff;
+  color: #f2f2f2;
   text-decoration: none;
   transition: color 0.3s;
   font-size: 1rem;
@@ -54,11 +113,11 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5vw;
   text-align: center;
+  padding: 5vw;
+  transition: all 0.8s ease-out;
   opacity: 0;
   transform: translateY(50px);
-  transition: all 0.8s ease-out;
 }
 
 .panel.active {
@@ -67,7 +126,7 @@ html, body {
 }
 
 .alt-bg {
-  background: #2a2a2a;
+  background: #363636;
 }
 
 /* Content */
@@ -84,17 +143,34 @@ h2 {
 p {
   font-size: clamp(1rem, 1.2vw, 1.2rem);
   line-height: 1.7;
+  color: #d6d6d6;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  background: #00bcd4;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #00a0b4;
+}
+
+/* Footer */
 footer {
-  position: relative;
   text-align: center;
-  background: #0c0c0c;
-  padding: 1rem;
+  padding: 1.5rem;
+  background: #2a2a2a;
   font-size: 0.9rem;
-  z-index: 10;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     gap: 1rem;
@@ -102,5 +178,11 @@ footer {
   }
   .panel {
     padding: 10vw;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1rem;
   }
 }
