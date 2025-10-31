@@ -1,53 +1,41 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Animate each section as it scrolls into view
-gsap.utils.toArray(".panel").forEach((panel) => {
-  const content = panel.querySelector(".content");
-  const image = panel.querySelector(".image");
-
-  gsap.fromTo(content,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1, y: 0,
-      duration: 1.2,
-      scrollTrigger: {
-        trigger: panel,
-        start: "top 80%",
-        toggleActions: "play none none reverse",
-      }
-    });
-
-  if (image) {
-    gsap.fromTo(image,
-      { opacity: 0, scale: 1.1 },
-      {
-        opacity: 1, scale: 1,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: panel,
-          start: "top 70%",
-          toggleActions: "play none none reverse",
-        }
-      });
+// Fade-in content for animated sections
+document.querySelectorAll(".panel.animated, .panel.sticky").forEach(panel => {
+  const content = panel.querySelector(".content, .sticky-inner");
+  if(content){
+    gsap.fromTo(content,
+      {opacity:0, y:50},
+      {opacity:1, y:0, duration:1.2,
+       scrollTrigger:{trigger:panel, start:"top 70%", toggleActions:"play none none reverse"}});
   }
 });
 
-// Smooth scroll to sections
+// Sticky pinning for sticky sections
+document.querySelectorAll(".panel.sticky").forEach(panel => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top top",
+    end: "+=150%",
+    pin: true,
+    pinSpacing: true,
+    scrub: true
+  });
+});
+
+// Smooth navbar scroll
 document.querySelectorAll('.nav-links a').forEach(anchor => {
   anchor.addEventListener('click', e => {
     e.preventDefault();
     const target = document.querySelector(anchor.getAttribute('href'));
-    window.scrollTo({
-      top: target.offsetTop - 50,
-      behavior: 'smooth'
-    });
+    window.scrollTo({top: target.offsetTop - 50, behavior:'smooth'});
   });
 });
 
-// Learn More buttons (placeholder logic)
-document.querySelectorAll('.learn-more').forEach(button => {
+// Learn More buttons
+document.querySelectorAll('.learn-more, .cta').forEach(button => {
   button.addEventListener('click', () => {
-    const page = button.dataset.target;
-    window.location.href = `${page}.html`; // e.g., about.html, translation.html
+    const target = button.dataset.target;
+    if(target) window.location.href = `${target}.html`;
   });
 });

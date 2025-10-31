@@ -1,97 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Billy | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billy | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">BILLY</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#translation">Translation</a>
-      <a href="#development">Development</a>
-      <a href="#model">3D</a>
-      <a href="#photo">Photography</a>
-    </div>
-  </nav>
+<nav>
+  <div class="logo">BILLY</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#translation">Translation</a>
+    <a href="#development">Development</a>
+    <a href="#model">3D</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#photo">Photography</a>
+  </div>
+</nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="panel">
-    <div class="content">
-      <h1>Hey! I'm Billy.</h1>
-      <p>A designer, developer, and translator creating purposeful digital experiences.</p>
-      <button class="cta">Explore My Work ↓</button>
-    </div>
-    <div class="background-img" style="background-image: url('https://images.unsplash.com/photo-1522199710521-72d69614c702');"></div>
-  </section>
+<!-- Hero Sticky -->
+<section id="hero" class="panel sticky">
+  <div class="sticky-inner">
+    <h1>Hey! I'm Billy.</h1>
+    <p>Crafting experiences across design, code, language, and 3D.</p>
+    <button class="cta">Explore ↓</button>
+    <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1522199710521-72d69614c702');"></div>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="panel">
-    <div class="content">
-      <h2>About Me</h2>
-      <p>I’m a 16-year-old creator based in Ireland, blending design, code, and language. 
-         From 3D CAD to game design, I craft clear and engaging interfaces and experiences.</p>
-      <button class="learn-more" data-target="about">Learn More</button>
-    </div>
-    <div class="image" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');"></div>
-  </section>
+<!-- About Static -->
+<section id="about" class="panel static">
+  <div class="content">
+    <h2>About Me</h2>
+    <p>I’m a 16-year-old creator based in Ireland, blending UI/UX design, development, translation, and 3D modeling to craft clear, engaging experiences.</p>
+    <button class="learn-more" data-target="about">Learn More</button>
+  </div>
+  <div class="image" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d')"></div>
+</section>
 
-  <!-- Translation Section -->
-  <section id="translation" class="panel">
-    <div class="content">
-      <h2>Translation & Localisation</h2>
-      <p>Bridging English and Mandarin through tone, accuracy, and culture — I make language feel native to the medium.</p>
-      <button class="learn-more" data-target="translation">Learn More</button>
-    </div>
-    <div class="image" style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0');"></div>
-  </section>
+<!-- Translation Animated -->
+<section id="translation" class="panel animated">
+  <div class="content">
+    <h2>🌐 Translation & Localisation</h2>
+    <p>Bridging English and Mandarin, creating translations that feel native. Projects include Discord bots, games, websites — tone and layout preserved naturally.</p>
+    <button class="learn-more" data-target="translation">Learn More</button>
+  </div>
+  <div class="image" style="background-image:url('https://images.unsplash.com/photo-1557804506-669a67965ba0')"></div>
+</section>
 
-  <!-- Development Section -->
-  <section id="development" class="panel">
-    <div class="content">
-      <h2>Development</h2>
-      <p>I build interactive systems, user interfaces, and game mechanics — especially within Roblox Studio and Lua scripting.</p>
-      <button class="learn-more" data-target="development">Learn More</button>
-    </div>
-    <div class="image" style="background-image: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f');"></div>
-  </section>
+<!-- Development Sticky -->
+<section id="development" class="panel sticky">
+  <div class="sticky-inner">
+    <h2>🖥️ Development</h2>
+    <p>From intuitive interfaces to complex Roblox systems: vehicle mechanics, phone GUIs, and interactive tools.</p>
+    <button class="learn-more" data-target="development">Learn More</button>
+    <div class="bg-image" style="background-image:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f')"></div>
+  </div>
+</section>
 
-  <!-- 3D Modelling Section -->
-  <section id="model" class="panel">
-    <div class="content">
-      <h2>3D Modelling</h2>
-      <p>From SolidWorks precision to Blender creativity, I design parts, assemblies, and models ready for both play and production.</p>
-      <button class="learn-more" data-target="3d">Learn More</button>
-    </div>
-    <div class="image" style="background-image: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e');"></div>
-  </section>
+<!-- 3D Modelling Animated -->
+<section id="model" class="panel animated">
+  <div class="content">
+    <h2>🧊 3D Modelling</h2>
+    <p>SolidWorks and Blender modeling for game assets and real-world parts, optimized for performance and clarity.</p>
+    <button class="learn-more" data-target="3d">Learn More</button>
+  </div>
+  <div class="image" style="background-image:url('https://images.unsplash.com/photo-1581090700227-1e37b190418e')"></div>
+</section>
 
-  <!-- Photography Section -->
-  <section id="photo" class="panel">
-    <div class="content">
-      <h2>Photography</h2>
-      <p>Exploring urban and rural life through my lens — focusing on light, texture, and authenticity.</p>
-      <button class="learn-more" data-target="photo">Learn More</button>
-    </div>
-    <div class="image" style="background-image: url('https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0');"></div>
-  </section>
+<!-- Achievements Animated -->
+<section id="achievements" class="panel animated">
+  <div class="content">
+    <h2>🏆 Achievements</h2>
+    <p>Winner of local hackathons, Roblox scripting contests, and design awards. Recognized for creativity and technical skill.</p>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Billy. All rights reserved.</p>
-  </footer>
+<!-- Testimonials Animated -->
+<section id="testimonials" class="panel animated">
+  <div class="content">
+    <h2>💬 Testimonials</h2>
+    <p>"Billy is a rare talent, combining technical skill with a designer’s eye." — Project Collaborator</p>
+    <p>"Translations were perfect, and UI was intuitive." — Game Developer</p>
+  </div>
+</section>
 
-  <!-- Option for expansion -->
-  <!-- You can create separate HTML pages like 'translation.html', 'development.html', etc., and link them from the Learn More buttons above. -->
+<!-- Photography Static -->
+<section id="photo" class="panel static">
+  <div class="content">
+    <h2>📸 Photography</h2>
+    <p>Urban and emergency service photography with a focus on light, texture, and story.</p>
+    <button class="learn-more" data-target="photo">Learn More</button>
+  </div>
+  <div class="image" style="background-image:url('https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0')"></div>
+</section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+<!-- Footer -->
+<footer>
+  <p>© 2025 Billy. Let’s build something together.</p>
+</footer>
+
+<!-- Extra pages comment -->
+<!-- translation.html, development.html, 3d.html, photo.html, achievements.html, testimonials.html -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
