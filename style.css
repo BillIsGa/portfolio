@@ -1,4 +1,4 @@
-/* Base */
+/* Reset + Base */
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +6,7 @@
 }
 
 html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
   color: #fff;
   background: #0e0e0e;
@@ -18,10 +16,10 @@ html, body {
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  padding: 1rem 5%;
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,40 +49,37 @@ html, body {
   color: #00bcd4;
 }
 
-/* Scroll Container */
-.scroll-container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  width: 500vw; /* 5 panels */
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  transition: transform 1s ease-in-out;
-}
-
 /* Panels */
 .panel {
-  flex: 0 0 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 5vw;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.panel.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .alt-bg {
-  background-color: #141414;
+  background: #141414;
 }
 
+/* Content */
 .content {
   max-width: 800px;
 }
 
 h2 {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
-  margin-bottom: 1rem;
   color: #00bcd4;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -94,26 +89,12 @@ p {
 
 /* Footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position: relative;
   text-align: center;
   background: #0c0c0c;
-  padding: 0.7rem;
+  padding: 1rem;
   font-size: 0.9rem;
   z-index: 10;
-}
-
-/* Smooth fade animation */
-.panel {
-  opacity: 0;
-  transform: translateY(3rem);
-  transition: all 0.8s ease-out;
-}
-
-.panel.active {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Responsive */
