@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Showcase</title>
+<link rel="stylesheet" href="style.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #323232;
+  color: #f5f5f7;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+  max-width: 800px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.hero .icon {
+  font-size: 120px;
+  color: #2997ff;
+  margin: 40px 0;
+}
+
+.hero .stat-number {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero .stat-text {
+  color: #86868b;
+  font-size: 18px;
+}
+
+/* Game Grid Section */
+.section {
+  padding: 60px 20px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.game-card {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 220px;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.game-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.game-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-author {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 6px;
+}
+
+.game-visits {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 28px; }
+  .hero .stat-number { font-size: 48px; }
+  .game-card { width: 45%; }
+}
+@media (max-width: 480px) {
+  .game-card { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>I specialize in Chinese and bring experience in providing localization services.</h1>
+  <p>Additionally, I hold a certified reading score of <strong>C1 Advanced</strong> on the CEFR scale.</p>
+  <p>I am also a member of George Gaitanis’s <a href="#" style="color:#2997ff;text-decoration:underline;">International Translation Services</a>, which you can join to access localization services from various languages!</p>
+  <div class="icon">🌐</div>
+  <div class="stat-number">5 164 855 000</div>
+  <div class="stat-text">total known user interactions</div>
+</section>
+
+<!-- Roblox Games Section -->
+<section class="section">
+  <h2>My Previous Projects - ROBLOX Games</h2>
+  <div class="game-grid">
+    <a href="https://www.roblox.com/games/8737602449/PLS-DONATE" class="game-card">
+      <img src="https://tr.rbxcdn.com/180DAY-3ab62d59fadff928420ec3f268dc816a/512/512/Image/Webp/noFilter" alt="PLS DONATE">
+      <div class="game-content">
+        <p class="game-title">PLS DONATE 💸</p>
+        <p class="game-author">@haz3mn</p>
+        <p class="game-visits">4.0B+ Visits</p>
+      </div>
+    </a>
+    <a href="https://www.roblox.com/games/6161235818/Twisted-BETA" class="game-card">
+      <img src="https://tr.rbxcdn.com/180DAY-7018838572d6e13cff76460da191774f/512/512/Image/Webp/noFilter" alt="Twisted">
+      <div class="game-content">
+        <p class="game-title">Twisted [BETA]</p>
+        <p class="game-author">Twisted Official</p>
+        <p class="game-visits">70.9M+ Visits</p>
+      </div>
+    </a>
+    <a href="https://www.roblox.com/games/16446180574/Twenty-One" class="game-card">
+      <img src="https://tr.rbxcdn.com/180DAY-5220eaae37f43f9b50f1c86a1f84a8f2/256/256/Image/Webp/noFilter" alt="Twenty One">
+      <div class="game-content">
+        <p class="game-title">♠ Twenty One</p>
+        <p class="game-author">Worst. experience</p>
+        <p class="game-visits">62.6M+ Visits</p>
+      </div>
+    </a>
+    <a href="https://www.roblox.com/games/105265986112006/Short-Creepy-Horror-Stories-New-STORY" class="game-card">
+      <img src="https://tr.rbxcdn.com/180DAY-f780e08711932f2b53a4f62135d24b6c/256/256/Image/Webp/noFilter" alt="Short Creepy Stories">
+      <div class="game-content">
+        <p class="game-title">Short Creepy Horror Stories</p>
+        <p class="game-author">@kharbor_ykt</p>
+        <p class="game-visits">63.5M+ Visits</p>
+      </div>
+    </a>
+    <a href="https://www.roblox.com/games/113323927469374/Musical-Chairs" class="game-card">
+      <img src="https://tr.rbxcdn.com/180DAY-03efd3d841628ff236c8da8d55733dea/512/512/Image/Webp/noFilter" alt="Musical Chairs">
+      <div class="game-content">
+        <p class="game-title">Musical Chairs 🎵🪑</p>
+        <p class="game-author">Infinity Forge Interactive</p>
+        <p class="game-visits">230.1M+ Visits</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
