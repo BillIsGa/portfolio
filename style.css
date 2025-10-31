@@ -27,6 +27,23 @@ body.loaded {
   overflow: hidden;
 }
 
+.scroll-indicator {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 40px;
+  background: #00bcd4;
+  border-radius: 2px;
+  animation: scrollPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.2; transform: translate(-50%, 0); }
+  50% { opacity: 1; transform: translate(-50%, 10px); }
+}
+
 /* Moving light effect */
 #intro::before {
   content: "";
