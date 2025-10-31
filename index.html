@@ -3,85 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Product | Portfolio</title>
+<title>Billy - Portfolio</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <nav>
-  <div class="logo">MYPORTFOLIO</div>
-  <div class="nav-links">
-    <a href="#hero">Home</a>
-    <a href="#section1">Section 1</a>
-    <a href="#section2">Section 2</a>
-    <a href="#section3">Section 3</a>
-    <a href="#section4">Section 4</a>
-    <a href="#section5">Section 5</a>
+  <div class="nav-content">
+    <div class="logo">Billy</div>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#translation">Translation</a>
+      <a href="#development">Development</a>
+      <a href="#3d">3D</a>
+      <a href="#more">More</a>
+    </div>
   </div>
 </nav>
 
-<!-- Hero Sticky -->
-<section id="hero" class="panel sticky">
-  <div class="sticky-inner">
-    <h1>Introducing Our Latest Creation</h1>
-    <p>Fully responsive, Apple-style layout with placeholder content.</p>
-    <button class="cta">Explore ↓</button>
-    <div class="bg-image" style="background-image:url('https://via.placeholder.com/1920x1080');"></div>
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-gradient"></div>
+  <h1>Billy.</h1>
+  <p class="subtitle">Designer. Developer. Translator.<br>Creating experiences that matter.</p>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="section-content section-large">
+    <h2>Crafting digital excellence<br>at 16.</h2>
+    <p class="tagline">Based in Ireland. Working worldwide.</p>
+    <p class="description">Bridging cultures through translation, building interfaces with code, and sculpting ideas in 3D. Every project is an opportunity to create something extraordinary.</p>
+    <div class="links">
+      <a href="about.html" class="link-primary">Learn more ›</a>
+      <a href="contact.html" class="link-secondary">Get in touch ›</a>
+    </div>
   </div>
 </section>
 
-<!-- Section 1 - Sticky -->
-<section id="section1" class="panel sticky">
-  <div class="sticky-inner">
-    <h2>Feature One</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula.</p>
-    <div class="bg-image" style="background-image:url('https://via.placeholder.com/1200x600');"></div>
+<!-- Translation -->
+<section class="section" id="translation">
+  <div class="section-content split-section">
+    <div>
+      <h2>Translation.<br>Localized to<br>perfection.</h2>
+      <p class="description">Fluent in English and Mandarin Chinese. Specializing in game localization, UI adaptation, and cultural nuance. From Discord bots to full video games, every word matters.</p>
+      <div class="links">
+        <a href="translation.html" class="link-primary">Explore projects ›</a>
+      </div>
+    </div>
+    <div class="visual-placeholder">🌐</div>
   </div>
 </section>
 
-<!-- Section 2 - Animated -->
-<section id="section2" class="panel animated">
-  <div class="content">
-    <h2>Feature Two</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet.</p>
-    <div class="image" style="background-image:url('https://via.placeholder.com/600x400');"></div>
+<!-- Development -->
+<section class="section" id="development">
+  <div class="section-content split-section">
+    <div class="visual-placeholder">💻</div>
+    <div>
+      <h2>Development.<br>Powerful.<br>Intuitive.</h2>
+      <p class="description">Building immersive Roblox experiences with Lua. From complex vehicle systems to elegant phone GUIs, creating mechanics that feel natural and interfaces that disappear.</p>
+      <div class="links">
+        <a href="development.html" class="link-primary">View work ›</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Section 3 - Sticky -->
-<section id="section3" class="panel sticky">
-  <div class="sticky-inner">
-    <h2>Feature Three</h2>
-    <p>Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor.</p>
-    <div class="bg-image" style="background-image:url('https://via.placeholder.com/1200x600');"></div>
+<!-- 3D Modeling -->
+<section class="section" id="3d">
+  <div class="section-content section-large">
+    <h2>3D Modeling.<br>Precision meets creativity.</h2>
+    <p class="tagline">SolidWorks. Blender. Boundless possibilities.</p>
+    <p class="description">Engineering-grade CAD for mechanical assemblies. Optimized low-poly assets for games. Every model built with purpose, every polygon placed with intention.</p>
+    <div class="links">
+      <a href="3d.html" class="link-primary">See the work ›</a>
+    </div>
   </div>
 </section>
 
-<!-- Section 4 - Animated -->
-<section id="section4" class="panel animated">
-  <div class="content">
-    <h2>Feature Four</h2>
-    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
-    <div class="image" style="background-image:url('https://via.placeholder.com/600x400');"></div>
-  </div>
-</section>
-
-<!-- Section 5 - Static -->
-<section id="section5" class="panel static">
-  <div class="content">
-    <h2>Get Started</h2>
-    <p>Learn more about this placeholder product and explore additional pages.</p>
-    <button class="cta">Learn More</button>
+<!-- Grid Section -->
+<section class="section" id="more">
+  <div class="section-content">
+    <div class="grid-section">
+      <div class="grid-item">
+        <div class="icon">🏆</div>
+        <h3>Achievements</h3>
+        <p class="tagline">Award-winning work across hackathons and design competitions</p>
+        <a href="achievements.html" class="link-primary">View all ›</a>
+      </div>
+      <div class="grid-item">
+        <div class="icon">💬</div>
+        <h3>Testimonials</h3>
+        <p class="tagline">What clients and collaborators are saying</p>
+        <a href="testimonials.html" class="link-primary">Read more ›</a>
+      </div>
+      <div class="grid-item">
+        <div class="icon">📸</div>
+        <h3>Photography</h3>
+        <p class="tagline">Urban landscapes and emergency services through the lens</p>
+        <a href="photography.html" class="link-primary">Explore gallery ›</a>
+      </div>
+      <div class="grid-item">
+        <div class="icon">✉️</div>
+        <h3>Contact</h3>
+        <p class="tagline">Let's create something remarkable together</p>
+        <a href="contact.html" class="link-primary">Get in touch ›</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Placeholder Portfolio</p>
+  <p>© 2025 Billy. All rights reserved.</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
