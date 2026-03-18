@@ -8,7 +8,22 @@ import { Project } from '../types';
 
 const TranslationPage: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>(PROJECTS.filter(p => p.category === 'Translation'));
-  const [totalVisits, setTotalVisits] = useState(0);
+  const [totalVisits, setTotalVisits] = useState(() => {
+    let total = 0;
+    PROJECTS.filter(p => p.category === 'Translation').forEach(p => {
+      if (p.visits) {
+        const cleanVisits = p.visits.replace(/,/g, '');
+        const match = cleanVisits.match(/([\d.]+)([BMk]?)/);
+        if (match) {
+          const val = parseFloat(match[1]);
+          const unit = match[2];
+          const mult = unit === 'B' ? 1000000000 : unit === 'M' ? 1000000 : unit === 'k' ? 1000 : 1;
+          total += val * mult;
+        }
+      }
+    });
+    return total;
+  });
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchLiveStats = async () => {
@@ -18,10 +33,12 @@ const TranslationPage: React.FC = () => {
     setIsLoading(true);
     try {
       const placeIds = robloxProjects.map(p => p.placeId).join(',');
-      const response = await fetch(`/api/roblox/games?placeIds=${placeIds}`);
+      // Use the Web Service URL if provided, otherwise fallback to relative path
+      const apiUrl = import.meta.env.VITE_API_URL || '';
+      const response = await fetch(`${apiUrl}/api/roblox/games?placeIds=${placeIds}`);
       const liveData = await response.json();
 
-      if (Array.isArray(liveData)) {
+      if (Array.isArray(liveData) && liveData.length > 0) {
         let newTotal = 0;
         const updatedProjects = projects.map(p => {
           const live = liveData.find(ld => ld.placeId === p.placeId);
@@ -51,27 +68,32 @@ const TranslationPage: React.FC = () => {
         setProjects(updatedProjects);
         setTotalVisits(newTotal);
       } else {
-        // API failed, calculate total from static data
-        let staticTotal = 0;
-        projects.forEach(p => {
-          if (p.visits) {
-            const cleanVisits = p.visits.replace(/,/g, '');
-            const match = cleanVisits.match(/([\d.]+)([BMk]?)/);
-            if (match) {
-              const val = parseFloat(match[1]);
-              const unit = match[2];
-              const mult = unit === 'B' ? 1000000000 : unit === 'M' ? 1000000 : unit === 'k' ? 1000 : 1;
-              staticTotal += val * mult;
-            }
-          }
-        });
-        setTotalVisits(staticTotal);
+        console.warn("Roblox API returned no data or invalid format, using static fallback.");
+        calculateStaticTotal();
       }
     } catch (error) {
       console.error("Failed to fetch live stats:", error);
+      calculateStaticTotal();
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const calculateStaticTotal = () => {
+    let staticTotal = 0;
+    projects.forEach(p => {
+      if (p.visits) {
+        const cleanVisits = p.visits.replace(/,/g, '');
+        const match = cleanVisits.match(/([\d.]+)([BMk]?)/);
+        if (match) {
+          const val = parseFloat(match[1]);
+          const unit = match[2];
+          const mult = unit === 'B' ? 1000000000 : unit === 'M' ? 1000000 : unit === 'k' ? 1000 : 1;
+          staticTotal += val * mult;
+        }
+      }
+    });
+    setTotalVisits(staticTotal);
   };
 
   useEffect(() => {

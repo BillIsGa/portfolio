@@ -2,6 +2,7 @@ import express from "express";
 import { createServer as createViteServer } from "vite";
 import path from "path";
 import { fileURLToPath } from "url";
+import cors from "cors";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,6 +11,8 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
+  app.use(cors());
+
   // API routes
   app.get("/api/roblox/games", async (req, res) => {
     const { placeIds } = req.query;
@@ -17,60 +20,75 @@ async function startServer() {
       return res.status(400).json({ error: "placeIds query parameter is required" });
     }
 
+    const FALLBACK_MAPPING: Record<string, number> = {
+      "8737602449": 3325983364,   // PLS DONATE
+      "6161235818": 2260351343,   // Twisted
+      "16446180574": 5649983416,  // Twenty One
+      "12357508217": 4366551846,  // Chill Obby
+      "13389049867": 4729007328,  // 1% Win Obby
+      "14448027693": 5092019445,  // Mega Princess Tycoon
+      "15885874861": 5589089531,  // Eat Slimes
+      "16446142514": 5782782977,  // Floor is Lava
+      "105265986112006": 3933519391, // Short Creepy Horror Stories
+      "113323927469374": 4197793466, // Musical Chairs
+    };
+
     try {
-      const idArray = placeIds.split(",");
+      const idArray = placeIds.split(",").map(id => id.trim()).filter(Boolean);
       const headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json"
       };
 
-      // 1. Get Universe IDs from Place IDs
-      const placeDetailsRes = await fetch(`https://games.roblox.com/v1/games/multiget-place-details?placeIds=${placeIds}`, { headers });
-      const placeDetails = await placeDetailsRes.json();
-      
-      if (!Array.isArray(placeDetails)) {
-        console.error("Invalid placeDetails response:", placeDetails);
-        return res.status(500).json({ error: "Failed to fetch place details from Roblox", details: placeDetails });
-      }
+      console.log(`[Roblox Proxy] Fetching stats for ${idArray.length} places...`);
 
-      // Create a map of placeId -> universeId
-      const placeToUniverse = new Map();
-      placeDetails.forEach((pd: any) => {
-        placeToUniverse.set(pd.placeId.toString(), pd.universeId);
+      const placeToUniverse = new Map<string, number>();
+      idArray.forEach(pid => {
+        if (FALLBACK_MAPPING[pid]) placeToUniverse.set(pid, FALLBACK_MAPPING[pid]);
       });
 
-      const universeIds = Array.from(new Set(placeDetails.map((pd: any) => pd.universeId))).filter(Boolean).join(",");
-      
-      if (!universeIds) {
-        return res.status(404).json({ error: "No universe IDs found for provided place IDs" });
+      // 1. Resolve missing Universe IDs
+      const missingIds = idArray.filter(pid => !placeToUniverse.has(pid));
+      if (missingIds.length > 0) {
+        const pRes = await fetch(`https://games.roblox.com/v1/games/multiget-place-details?placeIds=${missingIds.join(",")}`, { headers });
+        if (pRes.ok) {
+          const data = await pRes.json();
+          if (Array.isArray(data)) {
+            data.forEach((pd: any) => {
+              if (pd.universeId) placeToUniverse.set(pd.placeId.toString(), pd.universeId);
+            });
+          }
+        }
       }
 
-      // 2. Get Game Details (Visits, Playing)
-      const gameDetailsRes = await fetch(`https://games.roblox.com/v1/games?universeIds=${universeIds}`, { headers });
-      const gameDetails = await gameDetailsRes.json();
-
-      if (!gameDetails || !Array.isArray(gameDetails.data)) {
-        console.error("Invalid gameDetails response:", gameDetails);
-        return res.status(500).json({ error: "Failed to fetch game details from Roblox", details: gameDetails });
+      const universeIds = Array.from(new Set(placeToUniverse.values())).filter(Boolean);
+      if (universeIds.length === 0) {
+        console.warn("[Roblox Proxy] No universe IDs resolved.");
+        return res.json([]);
       }
 
-      // 3. Get Icons
-      const iconsRes = await fetch(`https://thumbnails.roblox.com/v1/games/icons?universeIds=${universeIds}&size=512x512&format=Png&isCircular=false`, { headers });
-      const iconsData = await iconsRes.json();
+      // 2. Fetch Game Details & Icons
+      const uIdsStr = universeIds.join(",");
+      const [gRes, iRes] = await Promise.all([
+        fetch(`https://games.roblox.com/v1/games?universeIds=${uIdsStr}`, { headers }),
+        fetch(`https://thumbnails.roblox.com/v1/games/icons?universeIds=${uIdsStr}&size=512x512&format=Png&isCircular=false`, { headers })
+      ]);
 
-      // Combine data
-      // We want to return a result for each requested placeId if possible
+      const gData = gRes.ok ? await gRes.json() : { data: [] };
+      const iData = iRes.ok ? await iRes.json() : { data: [] };
+
       const results = idArray.map(pid => {
         const uid = placeToUniverse.get(pid);
         if (!uid) return null;
 
-        const game = gameDetails.data.find((g: any) => g.id === uid);
+        const game = gData.data?.find((g: any) => g.id === uid);
         if (!game) return null;
 
-        const icon = iconsData.data?.find((i: any) => i.targetId === uid)?.imageUrl;
+        const icon = iData.data?.find((i: any) => i.targetId === uid)?.imageUrl;
         
         return {
-          universeId: uid,
           placeId: pid,
+          universeId: uid,
           name: game.name,
           visits: game.visits,
           playing: game.playing,
@@ -78,10 +96,11 @@ async function startServer() {
         };
       }).filter(Boolean);
 
+      console.log(`[Roblox Proxy] Successfully fetched ${results.length} results.`);
       res.json(results);
     } catch (error) {
-      console.error("Roblox API Error:", error);
-      res.status(500).json({ error: "Failed to fetch data from Roblox API" });
+      console.error("[Roblox Proxy] Error:", error);
+      res.status(500).json({ error: "Roblox proxy failed" });
     }
   });
 
