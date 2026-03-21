@@ -155,17 +155,17 @@ const RobloxPage: React.FC = () => {
           >
             {/* An Garda Síochána Section */}
             <div className="space-y-12">
-              <div className="grid grid-cols-[725fr_350fr] gap-4">
-                <div className="aspect-[725/349] overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-[725fr_350fr] gap-8">
+                <div className="aspect-[725/348] overflow-hidden">
                   <img src="/assets/GdaShirt.png" alt="Garda shirts and gilets" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-                <div className="aspect-[350/350] overflow-hidden">
+                <div className="aspect-[350/348] overflow-hidden">
                   <img src="/assets/GdaDecJacket1.png" alt="A Detective Garda jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
 
               <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="aspect-[350/350] w-full md:w-[350px] shrink-0 overflow-hidden">
+                <div className="aspect-[350/348] w-full md:w-[350px] shrink-0 overflow-hidden">
                   <img src="/assets/ASUFleece.png" alt="ASU Fleece" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="flex-1 space-y-4">
@@ -190,14 +190,14 @@ const RobloxPage: React.FC = () => {
                 <img src="/assets/GdaJacket.png" alt="Garda jackets with unit variants" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
-                <div className="aspect-[350/350] overflow-hidden">
+              <div className="grid grid-cols-3 gap-8">
+                <div className="aspect-[350/348] overflow-hidden">
                   <img src="/assets/GdaDecJacket2.png" alt="A Detective Garda Jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-                <div className="aspect-[350/350] overflow-hidden">
+                <div className="aspect-[350/348] overflow-hidden">
                   <img src="/assets/CABJacket.png" alt="CAB Jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-                <div className="aspect-[350/350] overflow-hidden">
+                <div className="aspect-[350/348] overflow-hidden">
                   <img src="/assets/ASUFleece.png" alt="ASU Fleece" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
@@ -255,16 +255,16 @@ const RobloxPage: React.FC = () => {
                 <h2 className="text-2xl font-bold border-b border-border-default pb-4 inline-block px-8">Scotland</h2>
               </div>
 
-              <div className="grid grid-cols-[630fr_350fr] gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-[630fr_350fr] gap-8">
                 <div className="aspect-[630/348] overflow-hidden">
                   <img src="/assets/SAS.png" alt="Scotland Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-                <div className="aspect-[350/350] overflow-hidden">
+                <div className="aspect-[350/348] overflow-hidden">
                   <img src="/assets/SASShort.png" alt="Scotland Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
 
-              <div className="max-w-2xl mx-auto w-full aspect-[630/348] overflow-hidden">
+              <div className="max-w-[658px] mx-auto w-full aspect-[630/348] overflow-hidden">
                 <img src="/assets/SFRS.png" alt="Scotland Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
             </div>
@@ -275,14 +275,14 @@ const RobloxPage: React.FC = () => {
                 <h2 className="text-2xl font-bold border-b border-border-default pb-4 inline-block px-8">Arizona State Highway Patrol</h2>
               </div>
 
-              <div className="space-y-8 max-w-2xl mx-auto">
+              <div className="space-y-8 max-w-[658px] mx-auto">
                 <div className="aspect-[630/348] overflow-hidden">
                   <img src="/assets/AZDPSA.png" alt="Arizona Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[630/348] overflow-hidden">
                   <img src="/assets/AZDPSB.png" alt="Arizona Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-                <div className="aspect-[725/348] overflow-hidden">
+                <div className="aspect-[630/348] overflow-hidden">
                   <img src="/assets/AZDPSC.png" alt="Arizona Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
