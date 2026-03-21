@@ -157,7 +157,7 @@ const RobloxPage: React.FC = () => {
             <div className="space-y-12">
               <div className="grid grid-cols-[725fr_350fr] gap-4">
                 <div className="aspect-[725/349] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
-                  <img src="https://picsum.photos/seed/garda1/725/349" alt="Garda Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="./assets/GdaShirts.png" alt="Garda Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[350/350] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
                   <img src="https://picsum.photos/seed/garda2/350/350" alt="Garda Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
