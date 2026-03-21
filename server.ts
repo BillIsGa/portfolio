@@ -24,19 +24,6 @@ async function startServer() {
     res.setHeader('Pragma', 'no-cache');
     res.setHeader('Expires', '0');
 
-    const FALLBACK_MAPPING: Record<string, number> = {
-      "8737602449": 3325983364,   // PLS DONATE
-      "6161235818": 2260351343,   // Twisted
-      "16446180574": 5649983416,  // Twenty One
-      "12357508217": 4366551846,  // Chill Obby
-      "13389049867": 4729007328,  // 1% Win Obby
-      "14448027693": 5092019445,  // Mega Princess Tycoon
-      "15885874861": 5589089531,  // Eat Slimes
-      "16446142514": 5782782977,  // Floor is Lava
-      "105265986112006": 3933519391, // Short Creepy Horror Stories
-      "113323927469374": 4197793466, // Musical Chairs
-    };
-
     try {
       const idArray = placeIds.split(",").map(id => id.trim()).filter(Boolean);
       const headers = {
@@ -47,12 +34,8 @@ async function startServer() {
       console.log(`[Roblox Proxy] Fetching stats for ${idArray.length} places...`);
 
       const placeToUniverse = new Map<string, number>();
-      idArray.forEach(pid => {
-        if (FALLBACK_MAPPING[pid]) placeToUniverse.set(pid, FALLBACK_MAPPING[pid]);
-      });
-
-      // 1. Resolve missing Universe IDs
-      const missingIds = idArray.filter(pid => !placeToUniverse.has(pid));
+      const missingIds = idArray;
+      
       if (missingIds.length > 0) {
         console.log(`[Roblox Proxy] Resolving universe IDs for: ${missingIds.join(",")}`);
         const pRes = await fetch(`https://games.roblox.com/v1/games/multiget-place-details?placeIds=${missingIds.join(",")}`, { headers });
