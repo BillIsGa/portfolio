@@ -1,92 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  --color-text-default: var(--color-text-default);
-  --color-text-secondary: var(--color-text-secondary);
-  --color-bg-primary: var(--color-bg-primary);
-  --color-bg-input: var(--color-bg-input);
-  --color-border-default: var(--color-border-default);
-  --color-brand-default: var(--color-brand-default);
-  --color-brand-hover: var(--color-brand-hover);
-  --color-link-default: var(--color-link-default);
-  --color-link-hover: var(--color-link-hover);
-  --color-success: var(--color-success);
-  --color-error: var(--color-error);
-  --color-nav-bg-dark: var(--color-nav-bg-dark);
-  --color-cta-bg: var(--color-cta-bg);
-  --color-button-bg-transparent: var(--color-button-bg-transparent);
-  --color-button-bg-transparent-hover: var(--color-button-bg-transparent-hover);
-  --radius-lg: 0.5rem;
-}
-
-:root {
-  --color-text-default: #ffffff;
-  --color-text-secondary: #a1a1aa;
-  --color-bg-primary: #18181b;
-  --color-bg-input: #27272a;
-  --color-border-default: rgba(255, 255, 255, 0.1);
-
+  /* Brand Colors */
   --color-brand-default: #4f7eee;
   --color-brand-hover: #2563eb;
-  --color-link-default: #7a98f0;
-  --color-link-hover: #a4b3f3;
-  --color-success: #4ade80;
-  --color-error: #f87171;
-
-  --font-size-default: 0.875rem;
-  --radius-lg: 0.5rem;
-
-  --color-nav-bg-dark: #09090b;
+  
+  /* Text Colors */
+  --color-text-default: #ffffff;
+  --color-text-secondary: #a1a1aa;
+  
+  /* Backgrounds */
+  --color-bg-primary: #18181b;
+  --color-bg-input: #27272a;
   --color-cta-bg: #0f1118;
+  --color-nav-bg-dark: #09090b;
+  
+  /* UI Elements */
+  --color-border-default: rgba(255, 255, 255, 0.1);
   --color-button-bg-transparent: rgba(255, 255, 255, 0.05);
   --color-button-bg-transparent-hover: rgba(255, 255, 255, 0.1);
+  
+  /* Status */
+  --color-success: #4ade80;
+  --color-error: #f87171;
+  --color-link-default: #7a98f0;
+  --color-link-hover: #a4b3f3;
+
+  /* Spacing & Radius */
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-text-default: #18181b;
-    --color-text-secondary: #52525b;
-    --color-bg-primary: white;
-    --color-bg-input: #f4f4f5;
-    --color-border-default: #e4e4e7;
+/* Light Mode Overrides */
+.light {
+  --color-text-default: #18181b;
+  --color-text-secondary: #52525b;
+  --color-bg-primary: #ffffff;
+  --color-bg-input: #f4f4f5;
+  --color-border-default: #e4e4e7;
+  --color-nav-bg-dark: #ffffff;
+  --color-cta-bg: #f4f4f5;
+  --color-button-bg-transparent: #e4e4e7;
+  --color-button-bg-transparent-hover: #dadada;
+}
 
-    --color-brand-default: #4f7eee;
-    --color-brand-hover: #2563eb;
-    --color-link-default: #7a98f0;
-    --color-link-hover: #a4b3f3;
-    --color-success: #4ade80;
-    --color-error: #f87171;
-
-    --color-nav-bg-dark: white;
-    --color-cta-bg: #f4f4f5;
-    --color-button-bg-transparent: #e4e4e7;
-    --color-button-bg-transparent-hover: #e4e4e7;
+/* Base Styles */
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-default antialiased;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
 
-.light {
-  --color-text-default: #18181b !important;
-  --color-text-secondary: #52525b !important;
-  --color-bg-primary: white !important;
-  --color-bg-input: #f4f4f5 !important;
-  --color-border-default: #e4e4e7 !important;
-
-  --color-brand-default: #4f7eee;
-  --color-brand-hover: #2563eb;
-  --color-link-default: #7a98f0;
-  --color-link-hover: #a4b3f3;
-  --color-success: #4ade80;
-  --color-error: #f87171;
-
-  --color-nav-bg-dark: rgb(248, 248, 248) !important;
-  --color-cta-bg: #f4f4f5 !important;
-  --color-button-bg-transparent: #e4e4e7 !important;
-  --color-button-bg-transparent-hover: #dadada !important;
-}
-
-body {
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-default);
-  font-size: var(--font-size-default);
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Custom Utilities */
+@layer utilities {
+  .selection-brand {
+    @apply selection:bg-brand-default selection:text-white;
+  }
 }
