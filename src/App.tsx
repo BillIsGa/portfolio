@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -22,9 +22,9 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/roblox" element={<RobloxPage />} />
-            <Route path="/clothing" element={<ClothingPage />} />
-            <Route path="/engineering" element={<EngineeringPage />} />
-            <Route path="/translation" element={<TranslationPage />} />
+            <Route path="/clothing" element={<Navigate to="/roblox?tab=Clothing" replace />} />
+            <Route path="/engineering" element={<Navigate to="/roblox?tab=Development" replace />} />
+            <Route path="/translation" element={<Navigate to="/roblox?tab=Localisation" replace />} />
             <Route path="/leaving-cert" element={<LeavingCertPage />} />
             <Route path="/about" element={<About />} />
           </Routes>

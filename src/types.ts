@@ -8,6 +8,7 @@ export interface Project {
   link?: string;
   author?: string;
   visits?: string;
+  numericVisits?: number;
   placeId?: string;
   isLive?: boolean;
 }
