@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import RobloxPage from './pages/RobloxPage';
 import EngineeringPage from './pages/EngineeringPage';
+import TranslationPage from './pages/TranslationPage';
+import LeavingCertPage from './pages/LeavingCertPage';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/roblox" element={<RobloxPage />} />
             <Route path="/engineering" element={<EngineeringPage />} />
+            <Route path="/translation" element={<TranslationPage />} />
+            <Route path="/leaving-cert" element={<LeavingCertPage />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>

@@ -6,12 +6,16 @@ import { PROJECTS } from '../constants';
 import { ProjectCard } from '../components/ProjectCard';
 
 const Home: React.FC = () => {
-  const featuredProjects = PROJECTS.slice(0, 3);
+  const featuredProjects = [
+    PROJECTS.find(p => p.id === 'pls-donate')!,
+    PROJECTS.find(p => p.id === 'voicemaster')!,
+    PROJECTS.find(p => p.id === 'lc-dcg-project')!,
+  ];
 
   const services = [
-    { icon: <Globe size={24} />, title: 'Roblox', desc: 'Full-stack Roblox services: Localisation, Dev & Design.' },
-    { icon: <Code size={24} />, title: 'Engineering', desc: 'Software development and technical systems.' },
-    { icon: <Box size={24} />, title: 'CAD Modelling', desc: 'Mechanical design and 3D assemblies in SolidWorks.' },
+    { icon: <Globe size={24} />, title: 'Translation', desc: 'Professional Chinese-English localisation for apps and docs.' },
+    { icon: <Code size={24} />, title: 'Roblox', desc: 'Full-stack Roblox services: Localisation, Dev & Design.' },
+    { icon: <Box size={24} />, title: 'Engineering', desc: 'Software development and technical systems.' },
     { icon: <Camera size={24} />, title: 'Photography', desc: 'Urban street photography and urban life.' },
   ];
 

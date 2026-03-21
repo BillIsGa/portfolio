@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     author: '@haz3mn',
     description: 'Localisation services for one of the largest donation experiences on Roblox.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-3ab62d59fadff928420ec3f268dc816a/512/512/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/8737602449/PLS-DONATE',
     placeId: '8737602449'
@@ -18,7 +18,7 @@ export const PROJECTS: Project[] = [
     author: 'Twisted Official',
     description: 'Localisation for the premier storm chasing experience on Roblox.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-7018838572d6e13cff76460da191774f/512/512/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/6161235818/Twisted-BETA',
     placeId: '6161235818'
@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
     author: 'Worst. experience',
     description: 'Chinese localisation for this popular card game experience.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-5220eaae37f43f9b50f1c86a1f84a8f2/256/256/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/16446180574/Twenty-One',
     placeId: '16446180574'
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     author: '@kharbor_ykt',
     description: 'Localisation for a collection of immersive horror experiences.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-f780e08711932f2b53a4f62135d24b6c/256/256/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/105265986112006/Short-Creepy-Horror-Stories-New-STORY',
     placeId: '105265986112006'
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     author: 'Infinity Forge Interactive',
     description: 'Localisation for a fast-paced multiplayer musical chairs game.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-03efd3d841628ff236c8da8d55733dea/512/512/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/113323927469374/Musical-Chairs',
     placeId: '113323927469374'
@@ -62,7 +62,7 @@ export const PROJECTS: Project[] = [
     author: 'Banana Studios Games',
     description: 'Chinese localisation for a massive obstacle course experience.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-ceb13f07cdc84f5f609db1b177c031a3/512/512/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/12357508217/Chill-Obby',
     placeId: '12357508217'
@@ -73,7 +73,7 @@ export const PROJECTS: Project[] = [
     author: 'Banana Studios Games',
     description: 'Localisation for the challenging 1% Win Obby experience.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-634fd5282d8f6d42a58dec09bb3faeeb/512/512/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/13389049867/1-Win-Obby',
     placeId: '13389049867'
@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
     author: 'Banana Studios Games',
     description: 'Localisation for a popular tycoon experience.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-2e29e413949bec85b1ccc24a8e73f609/256/256/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/14448027693/Mega-Princess-Tycoon',
     placeId: '14448027693'
@@ -95,7 +95,7 @@ export const PROJECTS: Project[] = [
     author: 'Banana Studios Games',
     description: 'Localisation for this growth-based simulator.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-607187b4ddee8534f3a106e15e8e01a7/512/512/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/15885874861/Eat-Slimes-to-Grow-HUGE',
     placeId: '15885874861'
@@ -106,7 +106,7 @@ export const PROJECTS: Project[] = [
     author: 'Banana Studios Games',
     description: 'Localisation for the classic "Floor is Lava" experience.',
     category: 'Roblox',
-    tags: ['Roblox', 'Localisation', 'Mandarin'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-cbfc4ac279bfb3c5e223700b984f193e/150/150/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/16446142514/The-Ground-is-LAVA',
     placeId: '16446142514'
@@ -117,7 +117,7 @@ export const PROJECTS: Project[] = [
     author: 'The Anomaly',
     description: 'A horror experience on Roblox featuring unique gameplay mechanics and immersive environments.',
     category: 'Roblox',
-    tags: ['Roblox', 'Development', 'Horror', 'Scripting'],
+    tags: ['Development', 'Horror', 'Scripting'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-f780e08711932f2b53a4f62135d24b6c/256/256/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/137826330724902/Scary-Shawarma-Kiosk-the-ANOMALY',
     placeId: '137826330724902'
@@ -128,17 +128,49 @@ export const PROJECTS: Project[] = [
     author: 'VoiceMaster',
     visits: '455k+ Servers',
     description: 'Full documentation localisation for the VoiceMaster Discord bot.',
-    category: 'Engineering',
-    tags: ['Discord', 'Localisation', 'Mandarin'],
+    category: 'Translation',
+    tags: ['Localisation', 'Discord'],
     imageUrl: 'https://cdn.discordapp.com/icons/444255171460071446/a_d96af2c36f5b7f6f4b7d6ad52f1505f1.gif?size=1024',
     link: 'https://voicemaster.xyz/docs-category/help/'
+  },
+  {
+    id: 'legal-doc-translation',
+    title: 'Legal Document Localisation',
+    description: 'Professional translation of legal agreements and terms of service for international compliance.',
+    category: 'Translation',
+    tags: ['Localisation', 'Legal'],
+    imageUrl: 'https://picsum.photos/seed/legal/800/600',
+  },
+  {
+    id: 'tech-manual-translation',
+    title: 'Technical Manual Translation',
+    description: 'Localisation of complex technical manuals for industrial machinery and consumer electronics.',
+    category: 'Translation',
+    tags: ['Localisation', 'Technical'],
+    imageUrl: 'https://picsum.photos/seed/tech/800/600',
+  },
+  {
+    id: 'lc-dcg-project',
+    title: 'Leaving Cert DCG Project',
+    description: 'Design and Communication Graphics project submitted for the Leaving Certificate, featuring complex 3D assemblies and technical drawings.',
+    category: 'Leaving Cert',
+    tags: ['DCG', 'SolidWorks', 'Design'],
+    imageUrl: 'https://picsum.photos/seed/dcg/800/600',
+  },
+  {
+    id: 'lc-construction-project',
+    title: 'Leaving Cert Construction Project',
+    description: 'Practical and theoretical coursework for Construction Studies, including a scaled physical model and detailed portfolio.',
+    category: 'Leaving Cert',
+    tags: ['Construction', 'Woodwork', 'Design'],
+    imageUrl: 'https://picsum.photos/seed/construction/800/600',
   },
   {
     id: 'roblox-phone',
     title: 'Roblox Phone GUI System',
     description: 'A complex phone GUI system for Roblox games, featuring intuitive interfaces and realistic app mechanics.',
     category: 'Roblox',
-    tags: ['Roblox Studio', 'Luau', 'UI/UX', 'Scripting'],
+    tags: ['Luau', 'UI/UX', 'Scripting'],
     imageUrl: 'https://picsum.photos/seed/roblox-phone/800/600',
   },
   {
@@ -147,7 +179,7 @@ export const PROJECTS: Project[] = [
     author: 'PlayzBilly',
     description: 'Custom designed clothing assets for Roblox avatars, featuring modern street styles and tactical gear.',
     category: 'Roblox',
-    tags: ['Roblox', 'Clothing', 'Design', '2D Art'],
+    tags: ['Clothing', 'Design', '2D Art'],
     imageUrl: 'https://picsum.photos/seed/roblox-clothing/800/600',
   },
   {
