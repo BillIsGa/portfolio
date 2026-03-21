@@ -229,20 +229,22 @@ const RobloxPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-[630fr_350fr_515fr] gap-4 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-[630fr_350fr] gap-8 items-center">
                 <div className="aspect-[630/348] overflow-hidden">
-                  <img src="/assets/GCPDJacket.png" alt="GCPD Jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/assets/GCPDJacket.png" alt="GCPD Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-                <div className="flex flex-col gap-4">
-                  <div className="aspect-[1141/1012] overflow-hidden">
-                    <img src="/assets/GCPDBadge.png" alt="GCPD Badge" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                <div className="grid grid-cols-2 gap-4 items-center">
+                  <div className="flex flex-col gap-4">
+                    <div className="aspect-[1141/1012] overflow-hidden">
+                      <img src="/assets/GCPDBadge.png" alt="Badge 1" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                    </div>
+                    <div className="aspect-[976/1114] overflow-hidden">
+                      <img src="/assets/GCPDPatch.png" alt="Badge 2" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                    </div>
                   </div>
-                  <div className="aspect-[976/1114] overflow-hidden">
-                    <img src="/assets/GCPDPatch.png" alt="GCPD Patch" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                  <div className="aspect-[515/705] overflow-hidden">
+                    <img src="/assets/GCPDRef.png" alt="GCPD Reference" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
-                </div>
-                <div className="aspect-[515/705] overflow-hidden">
-                  <img src="/assets/GCPDRef.png" alt="GCPD Reference" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>
@@ -280,7 +282,7 @@ const RobloxPage: React.FC = () => {
                 <div className="aspect-[630/348] overflow-hidden">
                   <img src="/assets/AZDPSB.png" alt="Arizona Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-                <div className="aspect-[630/348] overflow-hidden">
+                <div className="aspect-[725/348] overflow-hidden">
                   <img src="/assets/AZDPSC.png" alt="Arizona Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
