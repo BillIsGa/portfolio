@@ -34,7 +34,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-brand-default font-bold text-xl tracking-tighter">Channers</div>
             <div className="text-text-secondary text-sm">
-              © {new Date().getFullYear()} Billy chna. All rights reserved.
+              © {new Date().getFullYear()} Billy Chan. All rights reserved.
             </div>
             <div className="flex gap-6 text-sm font-medium text-text-secondary">
               <a href="#" className="hover:text-text-default transition-colors">Twitter</a>

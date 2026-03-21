@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 import { ProjectCard } from '../components/ProjectCard';
 import { Globe, Languages, Layout, Award, Users, RefreshCw, ExternalLink, Code2, Shirt } from 'lucide-react';
