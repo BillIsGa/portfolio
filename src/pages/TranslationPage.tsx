@@ -145,7 +145,7 @@ const TranslationPage: React.FC = () => {
               </div>
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-4">
-                  <h3 className="text-white/80 uppercase tracking-widest text-xs font-bold">Live Global Impact</h3>
+                  <h3 className="text-white/80 uppercase tracking-widest text-xs font-bold">Contributed to over</h3>
                 </div>
                 <div className="text-4xl md:text-5xl font-bold mb-2 tracking-tighter">
                   {isLoading && totalVisits === 0 ? (
@@ -154,7 +154,7 @@ const TranslationPage: React.FC = () => {
                     <AnimatedCounter value={totalVisits} />
                   )}
                 </div>
-                <p className="text-white/90 font-medium text-sm">Total verified user interactions across all projects.</p>
+                <p className="text-white/90 font-medium text-sm">total known user interactions</p>
                 <p className="text-white/60 text-[10px] mt-4 uppercase tracking-widest">
                   {isLoading ? "Syncing with Roblox..." : `Last synced: ${lastSynced}`}
                 </p>
