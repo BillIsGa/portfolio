@@ -1,23 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* Mapping Tailwind color names to CSS variables for dynamic theme switching */
-  /* Using RGB components to support opacity modifiers with CSS variables in Tailwind v4 */
-  --color-brand-default: rgb(var(--brand-default));
-  --color-brand-hover: rgb(var(--brand-hover));
-  --color-text-default: rgb(var(--text-default));
-  --color-text-secondary: rgb(var(--text-secondary));
-  --color-bg-primary: rgb(var(--bg-primary));
-  --color-bg-input: rgb(var(--bg-input));
-  --color-cta-bg: rgb(var(--cta-bg));
-  --color-nav-bg-dark: rgb(var(--nav-bg-dark));
+  /* Brand Colors */
+  --color-brand-default: var(--brand-default);
+  --color-brand-hover: var(--brand-hover);
+  
+  /* Text Colors */
+  --color-text-default: var(--text-default);
+  --color-text-secondary: var(--text-secondary);
+  
+  /* Backgrounds */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-input: var(--bg-input);
+  --color-cta-bg: var(--cta-bg);
+  --color-nav-bg-dark: var(--nav-bg-dark);
+  
+  /* UI Elements */
   --color-border-default: var(--border-default);
   --color-button-bg-transparent: var(--button-bg-transparent);
   --color-button-bg-transparent-hover: var(--button-bg-transparent-hover);
-  --color-success: rgb(var(--success));
-  --color-error: rgb(var(--error));
-  --color-link-default: rgb(var(--link-default));
-  --color-link-hover: rgb(var(--link-hover));
+  
+  /* Status */
+  --color-success: #4ade80;
+  --color-error: #f87171;
+  --color-link-default: #7a98f0;
+  --color-link-hover: #a4b3f3;
 
   /* Spacing & Radius */
   --radius-lg: 0.5rem;
@@ -27,53 +34,41 @@
 }
 
 :root {
-  /* Dark Mode (Default) - RGB components */
-  --brand-default: 79 126 238; /* #4f7eee */
-  --brand-hover: 37 99 235; /* #2563eb */
-  --text-default: 255 255 255; /* #ffffff */
-  --text-secondary: 161 161 170; /* #a1a1aa */
-  --bg-primary: 24 24 27; /* #18181b */
-  --bg-input: 39 39 42; /* #27272a */
-  --cta-bg: 15 17 24; /* #0f1118 */
-  --nav-bg-dark: 9 9 11; /* #09090b */
-  --success: 74 222 128; /* #4ade80 */
-  --error: 248 113 113; /* #f87171 */
-  --link-default: 122 152 240; /* #7a98f0 */
-  --link-hover: 164 179 243; /* #a4b3f3 */
-
-  /* Standard CSS variables for non-color properties or complex values */
+  /* Dark Mode (Default) */
+  --brand-default: #4f7eee;
+  --brand-hover: #2563eb;
+  --text-default: #ffffff;
+  --text-secondary: #a1a1aa;
+  --bg-primary: #18181b;
+  --bg-input: #27272a;
+  --cta-bg: #0f1118;
+  --nav-bg-dark: #09090b;
   --border-default: rgba(255, 255, 255, 0.1);
   --button-bg-transparent: rgba(255, 255, 255, 0.05);
   --button-bg-transparent-hover: rgba(255, 255, 255, 0.1);
 }
 
 .light {
-  /* Light Mode Overrides - RGB components */
-  --text-default: 24 24 27; /* #18181b */
-  --text-secondary: 82 82 91; /* #52525b */
-  --bg-primary: 255 255 255; /* #ffffff */
-  --bg-input: 244 244 245; /* #f4f4f5 */
-  --nav-bg-dark: 255 255 255; /* #ffffff */
-  --cta-bg: 244 244 245; /* #f4f4f5 */
-
-  /* Standard CSS variables */
+  /* Light Mode Overrides */
+  --text-default: #18181b;
+  --text-secondary: #52525b;
+  --bg-primary: #ffffff;
+  --bg-input: #f4f4f5;
+  --nav-bg-dark: #ffffff;
+  --cta-bg: #f4f4f5;
   --border-default: #e4e4e7;
   --button-bg-transparent: #e4e4e7;
   --button-bg-transparent-hover: #dadada;
 }
 
-/* Base Styles */
 @layer base {
   body {
-    background-color: rgb(var(--bg-primary));
-    color: rgb(var(--text-default));
-    @apply antialiased;
+    @apply bg-bg-primary text-text-default antialiased;
     font-size: 0.875rem;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
 
-/* Custom Utilities */
 @layer utilities {
   .selection-brand {
     @apply selection:bg-brand-default selection:text-white;
