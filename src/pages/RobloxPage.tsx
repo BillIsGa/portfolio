@@ -3,12 +3,15 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 import { ProjectCard } from '../components/ProjectCard';
-import { Globe, Languages, Layout, Award, Users, RefreshCw, ExternalLink, Code2, Shirt } from 'lucide-react';
+import { Globe, Languages, Layout, Award, Users, RefreshCw, ExternalLink, Code2, Shirt, ArrowRight } from 'lucide-react';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { Project } from '../types';
 
 const RobloxPage: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>(PROJECTS.filter(p => p.category === 'Roblox'));
+  const topThreeIds = ['pls-donate', 'twisted', 'musical-chairs'];
+  const topThree = projects.filter(p => topThreeIds.includes(p.id));
+  const otherProjects = projects.filter(p => !topThreeIds.includes(p.id));
   const [totalVisits, setTotalVisits] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [lastSynced, setLastSynced] = useState<string>(new Date().toLocaleTimeString());
@@ -153,48 +156,59 @@ const RobloxPage: React.FC = () => {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          <div className="p-8 bg-cta-bg rounded-3xl border border-border-default">
-            <Languages className="text-brand-default mb-4" size={24} />
-            <h3 className="font-bold mb-2">Localisation</h3>
-            <p className="text-text-secondary text-sm">Expert Chinese-English translation with a focus on retention and cultural fit.</p>
+        {/* Top 3 Games Section */}
+        <div className="mb-24">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-2">Featured Contributions</h2>
+            <p className="text-text-secondary text-sm">High-impact experiences I've helped scale and localise.</p>
           </div>
-          <div className="p-8 bg-cta-bg rounded-3xl border border-border-default">
-            <Code2 className="text-brand-default mb-4" size={24} />
-            <h3 className="font-bold mb-2">Development</h3>
-            <p className="text-text-secondary text-sm">Specialising in Luau-based GUI systems and front-end game mechanics.</p>
-          </div>
-          <div className="p-8 bg-cta-bg rounded-3xl border border-border-default hover:border-brand-default/30 transition-colors group">
-            <Link to="/clothing">
-              <Shirt className="text-brand-default mb-4 group-hover:scale-110 transition-transform" size={24} />
-              <h3 className="font-bold mb-2">Avatar Assets</h3>
-              <p className="text-text-secondary text-sm">Custom clothing design and 2D asset creation for the Roblox marketplace.</p>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {topThree.map((project) => (
+              <div key={project.id} className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-brand-default to-brand-hover rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <ProjectCard project={project} />
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="space-y-20">
-          {/* Localisation Section */}
-          <div>
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-2">Localisation Projects</h2>
-              <p className="text-text-secondary text-sm">Games I've helped scale through professional translation services.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {projects.filter(p => p.tags.includes('Localisation')).map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
-          </div>
+        {/* Subsection Redirects */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+          <Link to="/translation" className="p-8 bg-cta-bg rounded-3xl border border-border-default hover:border-brand-default/30 transition-all hover:-translate-y-1 group">
+            <Languages className="text-brand-default mb-4 group-hover:scale-110 transition-transform" size={24} />
+            <h3 className="font-bold mb-2">Localisation</h3>
+            <p className="text-text-secondary text-sm mb-4">Expert Chinese-English translation with a focus on retention and cultural fit.</p>
+            <span className="text-brand-default text-xs font-bold flex items-center gap-1">
+              View Translation Projects <ArrowRight size={12} />
+            </span>
+          </Link>
+          <Link to="/engineering" className="p-8 bg-cta-bg rounded-3xl border border-border-default hover:border-brand-default/30 transition-all hover:-translate-y-1 group">
+            <Code2 className="text-brand-default mb-4 group-hover:scale-110 transition-transform" size={24} />
+            <h3 className="font-bold mb-2">Development</h3>
+            <p className="text-text-secondary text-sm mb-4">Specialising in Luau-based GUI systems and front-end game mechanics.</p>
+            <span className="text-brand-default text-xs font-bold flex items-center gap-1">
+              View Engineering <ArrowRight size={12} />
+            </span>
+          </Link>
+          <Link to="/clothing" className="p-8 bg-cta-bg rounded-3xl border border-border-default hover:border-brand-default/30 transition-all hover:-translate-y-1 group">
+            <Shirt className="text-brand-default mb-4 group-hover:scale-110 transition-transform" size={24} />
+            <h3 className="font-bold mb-2">Avatar Assets</h3>
+            <p className="text-text-secondary text-sm mb-4">Custom clothing design and 2D asset creation for the Roblox marketplace.</p>
+            <span className="text-brand-default text-xs font-bold flex items-center gap-1">
+              View Clothing Collection <ArrowRight size={12} />
+            </span>
+          </Link>
+        </div>
 
-          {/* Development & Design Section */}
+        <div className="space-y-20">
+          {/* All Projects Section */}
           <div>
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-2">Development & Design</h2>
-              <p className="text-text-secondary text-sm">Technical systems and creative assets built for the platform.</p>
+              <h2 className="text-2xl font-bold mb-2">All Roblox Projects</h2>
+              <p className="text-text-secondary text-sm">A complete list of my work on the platform.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {projects.filter(p => !p.tags.includes('Localisation')).map((project) => (
+              {otherProjects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>
