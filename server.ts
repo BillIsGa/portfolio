@@ -34,25 +34,18 @@ async function startServer() {
       console.log(`[Roblox Proxy] Fetching stats for ${idArray.length} places...`);
 
       const placeToUniverse = new Map<string, number>();
-      const missingIds = idArray;
       
+      const missingIds = idArray.filter(pid => !placeToUniverse.has(pid));
       if (missingIds.length > 0) {
-        console.log(`[Roblox Proxy] Resolving universe IDs for: ${missingIds.join(",")}`);
-        const pRes = await fetch(`https://games.roblox.com/v1/games/multiget-place-details?placeIds=${missingIds.join(",")}`, { headers });
-        if (pRes.ok) {
-          const data = await pRes.json();
-          const details = data?.data || data;
-          if (Array.isArray(details)) {
-            details.forEach((pd: any) => {
-              if (pd.universeId) {
-                console.log(`[Roblox Proxy] Resolved: Place ${pd.placeId} -> Universe ${pd.universeId}`);
-                placeToUniverse.set(pd.placeId.toString(), pd.universeId);
-              }
-            });
-          }
-        } else {
-          console.error(`[Roblox Proxy] Place details API failed: ${pRes.status} ${pRes.statusText}`);
-        }
+        await Promise.all(missingIds.map(async (pid) => {
+          try {
+            const r = await fetch(`https://apis.roblox.com/universes/v1/places/${pid}/universe`, { headers });
+            if (r.ok) {
+              const d = await r.json();
+              if (d?.universeId) placeToUniverse.set(pid, d.universeId);
+            }
+          } catch {}
+        }));
       }
 
       const universeIds = Array.from(new Set(placeToUniverse.values())).filter(Boolean);
