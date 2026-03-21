@@ -157,7 +157,7 @@ const RobloxPage: React.FC = () => {
             <div className="space-y-12">
               <div className="grid grid-cols-[725fr_350fr] gap-4">
                 <div className="aspect-[725/349] overflow-hidden">
-                  <img src="/assets/GdaShirt.png" alt="Garda shirts and gilets" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="../assets/GdaShirt.png" alt="Garda shirts and gilets" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[350/350] overflow-hidden">
                   <img src="/src/assets/GdaDecJacket1.png" alt="A Detective Garda jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
