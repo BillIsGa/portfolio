@@ -149,77 +149,142 @@ const RobloxPage: React.FC = () => {
       case 'Clothing':
         return (
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="space-y-16"
+            className="max-w-5xl mx-auto space-y-24 py-12"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div className="space-y-12">
-                <section>
-                  <h2 className="text-3xl font-bold mb-6 text-brand-default">Avatar Asset Design</h2>
-                  <p className="text-text-secondary text-lg leading-relaxed mb-6">
-                    I design high-fidelity <span className="text-text-default font-semibold">2D clothing assets</span> for the Roblox marketplace, with a specific focus on realistic law enforcement and tactical uniforms.
-                  </p>
-                </section>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  <section>
-                    <h3 className="text-xl font-bold mb-3">An Garda Síochána</h3>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      Detailed recreations of the Irish national police force uniforms, including the Armed Support Unit and Regular units.
-                    </p>
-                  </section>
-                  <section>
-                    <h3 className="text-xl font-bold mb-3">GCPD Collection</h3>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      NYPD-inspired uniforms from the Batman universe, specifically the 'Gotham' TV series variants.
-                    </p>
-                  </section>
-                  <section>
-                    <h3 className="text-xl font-bold mb-3">Police Scotland</h3>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      Featuring iconic high-visibility vests and tactical gear used by the Scottish national force.
-                    </p>
-                  </section>
-                  <section>
-                    <h3 className="text-xl font-bold mb-3">State Patrol</h3>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      Arizona Highway Patrol (AZDPS) recreations with state-specific insignia and tactical gear.
-                    </p>
-                  </section>
+            {/* An Garda Síochána Section */}
+            <div className="space-y-12">
+              <div className="grid grid-cols-[725fr_350fr] gap-4">
+                <div className="aspect-[725/349] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/garda1/725/349" alt="Garda Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-
-                <div className="p-8 bg-cta-bg rounded-3xl border border-border-default">
-                  <h4 className="font-bold mb-2">Marketplace Presence</h4>
-                  <p className="text-text-secondary text-sm">
-                    My designs are built with attention to detail, ensuring they look sharp on all Roblox avatar types and stand out in the catalog.
-                  </p>
+                <div className="aspect-[350/350] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/garda2/350/350" alt="Garda Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="sticky top-24 space-y-6">
-                  <div className="rounded-[2.5rem] overflow-hidden border border-border-default bg-cta-bg shadow-2xl">
-                    <img 
-                      src="https://picsum.photos/seed/roblox-uniforms/1200/1600" 
-                      alt="Roblox Clothing Showcase" 
-                      className="w-full h-auto"
-                      referrerPolicy="no-referrer"
-                    />
+              <div className="grid grid-cols-1 md:grid-cols-[350fr_1fr] gap-8 items-start">
+                <div className="aspect-[350/350] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/garda3/350/350" alt="Garda Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="space-y-4">
+                  <h2 className="text-xl font-bold">An Garda Síochána</h2>
+                  <div className="text-sm text-text-secondary space-y-4 leading-relaxed">
+                    <p>
+                      An Garda Síochána is the national police and security force for the Republic of Ireland. 
+                      Since Ireland is a small island, they are the only police force in the country. 
+                      The name comes from the Irish term 'The Guardians of Peace'. 
+                      Unlike many other security forces throughout the world, the Gardaí (plural for Garda, a single member of An Garda Síochána) are an unarmed police force, 
+                      with only specialised units having firearms, noteably the Armed Support Unit, depicted to the left.
+                    </p>
+                    <p>
+                      There many divisions in the Garda Síochána, such as the prementioned Armed Support Unit, the Regular Unit, the Roads Policing Unit, 
+                      the Technical Unit, Water Unit, Criminal Assets Buerea, and Detectives, all of which have been drawn out as closely as possible to real life uniforms.
+                    </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="aspect-square rounded-2xl overflow-hidden border border-border-default">
-                      <img src="https://picsum.photos/seed/uniform1/400/400" alt="Uniform Detail" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                    </div>
-                    <div className="aspect-square rounded-2xl overflow-hidden border border-border-default">
-                      <img src="https://picsum.photos/seed/uniform2/400/400" alt="Uniform Detail" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                    </div>
-                  </div>
+                </div>
+              </div>
+
+              <div className="w-full aspect-[1000/348] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                <img src="https://picsum.photos/seed/garda4/1000/348" alt="Garda Template 4" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+
+              <div className="grid grid-cols-3 gap-4">
+                <div className="aspect-[350/350] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/garda5/350/350" alt="Garda Template 5" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="aspect-[350/350] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/garda6/350/350" alt="Garda Template 6" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="aspect-[350/350] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/garda7/350/350" alt="Garda Template 7" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>
 
-            <div>
+            {/* Gotham City Police Department Section */}
+            <div className="space-y-12">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold border-b border-border-default pb-4 inline-block px-8">Gotham City Police Department</h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-[630fr_1fr] gap-8 items-start">
+                <div className="aspect-[630/348] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/gcpd1/630/348" alt="GCPD Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-lg font-bold">Gotham City Police Department</h3>
+                  <div className="text-sm text-text-secondary space-y-4 leading-relaxed">
+                    <p>
+                      The GCPD is a fictional police department from the Batman universe. There have been many versions of the uniform, 
+                      such as the green uniforms from Batman 2004, or the NYPD inspired ones from Nolan.
+                    </p>
+                    <p>
+                      My personal favourite is the uniform from the FOX show, 'Gotham', which is what I have drawn. 
+                      The uniform consists of a peaked cap, a light blue shirt with a dark-blue tie and black pants, with an optional black leather jacket. 
+                      Note that there are multiple variants of the jacket.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-[630fr_1141fr_976fr_515fr] gap-4 items-center">
+                <div className="aspect-[630/348] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/gcpd2/630/348" alt="GCPD Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="aspect-[1141/1012] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/gcpdbadge1/1141/1012" alt="Badge 1" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                </div>
+                <div className="aspect-[976/1114] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/gcpdbadge2/976/1114" alt="Badge 2" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                </div>
+                <div className="aspect-[515/705] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/gcpdref/515/705" alt="GCPD Reference" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+              </div>
+            </div>
+
+            {/* Scotland Section */}
+            <div className="space-y-12">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold border-b border-border-default pb-4 inline-block px-8">Scotland</h2>
+              </div>
+
+              <div className="grid grid-cols-[630fr_350fr] gap-4">
+                <div className="aspect-[630/348] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/scotland1/630/348" alt="Scotland Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="aspect-[350/350] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/scotland2/350/350" alt="Scotland Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+              </div>
+
+              <div className="max-w-2xl mx-auto w-full aspect-[630/348] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                <img src="https://picsum.photos/seed/scotland3/630/348" alt="Scotland Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+            </div>
+
+            {/* Arizona State Highway Patrol Section */}
+            <div className="space-y-12">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold border-b border-border-default pb-4 inline-block px-8">Arizona State Highway Patrol</h2>
+              </div>
+
+              <div className="space-y-8 max-w-2xl mx-auto">
+                <div className="aspect-[630/348] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/arizona1/630/348" alt="Arizona Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="aspect-[630/348] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/arizona2/630/348" alt="Arizona Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="aspect-[630/348] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <img src="https://picsum.photos/seed/arizona3/630/348" alt="Arizona Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-12 border-t border-border-default">
               <h3 className="text-2xl font-bold mb-8">Clothing Portfolio</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {projects.filter(p => p.tags.includes('Clothing')).map((project) => (
