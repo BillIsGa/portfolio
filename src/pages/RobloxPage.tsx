@@ -160,13 +160,13 @@ const RobloxPage: React.FC = () => {
                   <img src="../assets/GdaShirt.png" alt="Garda shirts and gilets" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[350/350] overflow-hidden">
-                  <img src="/src/assets/GdaDecJacket1.png" alt="A Detective Garda jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/GdaDecJacket1.png" alt="A Detective Garda jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
 
               <div className="flex flex-col md:flex-row gap-8 items-start">
                 <div className="w-[350px] h-[350px] shrink-0 overflow-hidden">
-                  <img src="/src/assets/ASUFleece.png" alt="ASU Fleece" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/ASUFleece.png" alt="ASU Fleece" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="flex-1 space-y-4">
                   <h2 className="text-xl font-bold">An Garda Síochána</h2>
@@ -187,18 +187,18 @@ const RobloxPage: React.FC = () => {
               </div>
 
               <div className="w-full aspect-[1000/348] overflow-hidden">
-                <img src="/src/assets/GdaJacket.png" alt="Garda jackets with unit variants" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="/public/assets/GdaJacket.png" alt="Garda jackets with unit variants" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
 
               <div className="grid grid-cols-3 gap-4">
                 <div className="aspect-[350/350] overflow-hidden">
-                  <img src="/src/assets/GdaDecJacket2.png" alt="A Detective Garda Jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/GdaDecJacket2.png" alt="A Detective Garda Jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[350/350] overflow-hidden">
-                  <img src="/src/assets/CABJacket.png" alt="CAB Jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/CABJacket.png" alt="CAB Jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[350/350] overflow-hidden">
-                  <img src="/src/assets/ASUFleece.png" alt="ASU Fleece" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/ASUFleece.png" alt="ASU Fleece" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>
@@ -211,7 +211,7 @@ const RobloxPage: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-[630fr_1fr] gap-8 items-start">
                 <div className="aspect-[630/348] overflow-hidden">
-                  <img src="/src/assets/GCPDShirt.png" alt="GCPD standard" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/GCPDShirt.png" alt="GCPD standard" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-lg font-bold">Gotham City Police Department</h3>
@@ -231,16 +231,16 @@ const RobloxPage: React.FC = () => {
 
               <div className="grid grid-cols-[630fr_1141fr_976fr_515fr] gap-4 items-center">
                 <div className="aspect-[630/348] overflow-hidden">
-                  <img src="/src/assets/GCPDJacket.png" alt="GCPD leather jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/GCPDJacket.png" alt="GCPD leather jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[1141/1012] overflow-hidden">
                   <img src="./assets/GCPDBadge.png" alt="GCPD badge" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[976/1114] overflow-hidden">
-                  <img src="/src/assets/GCPDPatch.png" alt="GCPD patch" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/GCPDPatch.png" alt="GCPD patch" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[515/705] overflow-hidden">
-                  <img src="/src/assets/GCPDRef.png" alt="GCPD Reference" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/GCPDRef.png" alt="GCPD Reference" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>
@@ -253,15 +253,15 @@ const RobloxPage: React.FC = () => {
 
               <div className="grid grid-cols-[630fr_350fr] gap-4">
                 <div className="aspect-[630/348] overflow-hidden">
-                  <img src="/src/assets/SAS.png" alt="Scotland Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/SAS.png" alt="Scotland Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[350/350] overflow-hidden">
-                  <img src="/src/assets/SASShort.png" alt="Scotland Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/SASShort.png" alt="Scotland Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
 
               <div className="max-w-2xl mx-auto w-full aspect-[630/348] overflow-hidden">
-                <img src="/src/assets/SFRS.png" alt="Scotland Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="/public/assets/SFRS.png" alt="Scotland Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
             </div>
 
@@ -273,13 +273,13 @@ const RobloxPage: React.FC = () => {
 
               <div className="space-y-8 max-w-2xl mx-auto">
                 <div className="aspect-[630/348] overflow-hidden">
-                  <img src="/src/assets/AZDPSA.png" alt="Arizona Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/AZDPSA.png" alt="Arizona Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[630/348] overflow-hidden">
-                  <img src="/src/assets/AZDPSB.png" alt="Arizona Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/AZDPSB.png" alt="Arizona Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[630/348] overflow-hidden">
-                  <img src="/src/assets/AZDPSC.png" alt="Arizona Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/public/assets/AZDPSC.png" alt="Arizona Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>
