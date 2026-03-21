@@ -23,7 +23,7 @@ const TranslationPage: React.FC = () => {
     try {
       const placeIds = robloxProjects.map(p => p.placeId).join(',');
       const apiUrl = import.meta.env.VITE_API_URL || '';
-      const response = await fetch(`${apiUrl}/api/roblox/games?placeIds=${placeIds}`);
+      const response = await fetch(`${apiUrl}/api/roblox/games?placeIds=${placeIds}&_t=${Date.now()}`);
       
       if (!response.ok) throw new Error('Failed to fetch live data');
       

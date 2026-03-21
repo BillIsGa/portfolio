@@ -20,6 +20,10 @@ async function startServer() {
       return res.status(400).json({ error: "placeIds query parameter is required" });
     }
 
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+
     const FALLBACK_MAPPING: Record<string, number> = {
       "8737602449": 3325983364,   // PLS DONATE
       "6161235818": 2260351343,   // Twisted
