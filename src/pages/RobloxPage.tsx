@@ -157,7 +157,7 @@ const RobloxPage: React.FC = () => {
             <div className="space-y-12">
               <div className="grid grid-cols-[725fr_350fr] gap-4">
                 <div className="aspect-[725/349] overflow-hidden">
-                  <img src="/src/assets/GdaShirt.png" alt="Garda shirts and gilets" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="./assets/GdaShirt.png" alt="Garda shirts and gilets" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[350/350] overflow-hidden">
                   <img src="/src/assets/GdaDecJacket1.png" alt="A Detective Garda jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -234,7 +234,7 @@ const RobloxPage: React.FC = () => {
                   <img src="/src/assets/GCPDJacket.png" alt="GCPD leather jacket" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[1141/1012] overflow-hidden">
-                  <img src="./src/assets/GCPDBadge.png" alt="GCPD badge" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                  <img src="./assets/GCPDBadge.png" alt="GCPD badge" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[976/1114] overflow-hidden">
                   <img src="/src/assets/GCPDPatch.png" alt="GCPD patch" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
