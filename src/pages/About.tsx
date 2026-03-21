@@ -95,6 +95,54 @@ const About: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Photography Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-32"
+        >
+          <div className="flex items-center gap-4 mb-12">
+            <div className="p-3 bg-brand-default/10 text-brand-default rounded-2xl">
+              <Instagram size={32} />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight">Photography</h2>
+              <p className="text-text-secondary">A collection of moments captured through my lens.</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-border-default group">
+              <img 
+                src="https://picsum.photos/seed/street1/800/1000" 
+                alt="Street Photography 1" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-border-default group">
+              <img 
+                src="https://picsum.photos/seed/street2/800/1000" 
+                alt="Street Photography 2" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-border-default group">
+              <img 
+                src="https://picsum.photos/seed/street3/800/1000" 
+                alt="Street Photography 3" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
+          <p className="text-center text-text-secondary mt-8 text-sm italic">
+            Mainly using a Sony CyberShot DSC-RX100 Mark I.
+          </p>
+        </motion.div>
       </section>
     </div>
   );

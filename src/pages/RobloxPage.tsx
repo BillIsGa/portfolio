@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { PROJECTS } from '../constants';
 import { ProjectCard } from '../components/ProjectCard';
-import { Globe, Languages, Layout, Award, Users, RefreshCw, ExternalLink } from 'lucide-react';
+import { Globe, Languages, Layout, Award, Users, RefreshCw, ExternalLink, Code2, Shirt } from 'lucide-react';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { Project } from '../types';
 
-const TranslationPage: React.FC = () => {
-  const [projects, setProjects] = useState<Project[]>(PROJECTS.filter(p => p.category === 'Translation'));
+const RobloxPage: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>(PROJECTS.filter(p => p.category === 'Roblox'));
   const [totalVisits, setTotalVisits] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [lastSynced, setLastSynced] = useState<string>(new Date().toLocaleTimeString());
@@ -39,7 +39,6 @@ const TranslationPage: React.FC = () => {
               ...p,
               visits: live.visits.toLocaleString(),
               imageUrl: live.iconUrl || p.imageUrl,
-              description: `${p.description} (Live: ${live.playing.toLocaleString()} playing now)`,
               isLive: true
             };
           }
@@ -64,7 +63,6 @@ const TranslationPage: React.FC = () => {
       }
     } catch (error) {
       console.error("Failed to fetch live stats:", error);
-      // If live fetch fails, calculate from whatever static data we have
       let staticTotal = 0;
       projects.forEach(p => {
         if (p.visits) {
@@ -99,9 +97,9 @@ const TranslationPage: React.FC = () => {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-brand-default/10 text-brand-default rounded-2xl">
-                <Globe size={32} />
+                <Layout size={32} />
               </div>
-              <h1 className="text-4xl font-bold tracking-tight">Translation & Localisation</h1>
+              <h1 className="text-4xl font-bold tracking-tight">Roblox Hub</h1>
             </div>
             <button 
               onClick={fetchLiveStats}
@@ -116,26 +114,17 @@ const TranslationPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <p className="text-text-secondary text-lg leading-relaxed">
-                I specialize in <span className="text-text-default font-semibold">Chinese</span> and bring extensive experience in providing localization services for games, apps, and digital platforms.
+                I am a <span className="text-text-default font-semibold">Roblox Platform Specialist</span> providing a full suite of services from high-end localisation to technical GUI development and avatar asset design.
               </p>
               <div className="flex items-start gap-4 p-6 bg-cta-bg rounded-3xl border border-border-default">
                 <Award className="text-brand-default shrink-0" size={24} />
                 <div>
-                  <h3 className="font-bold mb-1">C1 Advanced Certification</h3>
-                  <p className="text-text-secondary text-sm mb-3">Certified reading score of C1 Advanced on the CEFR scale.</p>
-                  <a 
-                    href="https://www.efset.org/cert/srrbM1" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-xs font-bold text-brand-default hover:underline flex items-center gap-1"
-                  >
-                    View Certificate <ExternalLink size={10} />
-                  </a>
+                  <h3 className="font-bold mb-1">Platform Expertise</h3>
+                  <p className="text-text-secondary text-sm mb-3">Deep understanding of the Roblox ecosystem, Luau scripting, and community trends.</p>
                 </div>
               </div>
               <p className="text-text-secondary leading-relaxed">
-                I am also a member of <span className="text-text-default font-medium">George Gaitanis's International Translation Services</span>, 
-                a global network providing localization services across various languages.
+                Whether it's making your game accessible to millions of Chinese players or building realistic UI systems, I help creators scale their experiences.
               </p>
             </div>
 
@@ -154,7 +143,7 @@ const TranslationPage: React.FC = () => {
                     <AnimatedCounter value={totalVisits} />
                   )}
                 </div>
-                <p className="text-white/90 font-medium text-sm">total known user interactions</p>
+                <p className="text-white/90 font-medium text-sm">known user interactions</p>
                 <p className="text-white/60 text-[10px] mt-4 uppercase tracking-widest">
                   {isLoading ? "Syncing with Roblox..." : `Last synced: ${lastSynced}`}
                 </p>
@@ -166,56 +155,43 @@ const TranslationPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           <div className="p-8 bg-cta-bg rounded-3xl border border-border-default">
             <Languages className="text-brand-default mb-4" size={24} />
-            <h3 className="font-bold mb-2">Mandarin Chinese</h3>
-            <p className="text-text-secondary text-sm">Specialising in high-quality Chinese-English localisation with cultural nuance.</p>
+            <h3 className="font-bold mb-2">Localisation</h3>
+            <p className="text-text-secondary text-sm">Expert Chinese-English translation with a focus on retention and cultural fit.</p>
           </div>
           <div className="p-8 bg-cta-bg rounded-3xl border border-border-default">
-            <Layout className="text-brand-default mb-4" size={24} />
-            <h3 className="font-bold mb-2">UI/UX Localisation</h3>
-            <p className="text-text-secondary text-sm">Ensuring translated text fits perfectly within UI constraints and layout-fit.</p>
+            <Code2 className="text-brand-default mb-4" size={24} />
+            <h3 className="font-bold mb-2">Development</h3>
+            <p className="text-text-secondary text-sm">Specialising in Luau-based GUI systems and front-end game mechanics.</p>
           </div>
           <div className="p-8 bg-cta-bg rounded-3xl border border-border-default">
-            <Globe className="text-brand-default mb-4" size={24} />
-            <h3 className="font-bold mb-2">Game Localisation</h3>
-            <p className="text-text-secondary text-sm">Expertise in localising game mechanics, dialogue, and community content.</p>
+            <Shirt className="text-brand-default mb-4" size={24} />
+            <h3 className="font-bold mb-2">Avatar Assets</h3>
+            <p className="text-text-secondary text-sm">Custom clothing design and 2D asset creation for the Roblox marketplace.</p>
           </div>
         </div>
 
         <div className="space-y-20">
-          {/* Banana Studios Section */}
+          {/* Localisation Section */}
           <div>
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-2">Banana Studios Games</h2>
-              <p className="text-text-secondary text-sm">A major collection of obstacle courses and simulators localised for Banana Studios.</p>
+              <h2 className="text-2xl font-bold mb-2">Localisation Projects</h2>
+              <p className="text-text-secondary text-sm">Games I've helped scale through professional translation services.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {projects.filter(p => p.author === 'Banana Studios Games').map((project) => (
+              {projects.filter(p => p.tags.includes('Localisation')).map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>
           </div>
 
-          {/* Other Roblox Games */}
+          {/* Development & Design Section */}
           <div>
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-2">Roblox Experiences</h2>
-              <p className="text-text-secondary text-sm">Localisation services for various top-tier Roblox experiences.</p>
+              <h2 className="text-2xl font-bold mb-2">Development & Design</h2>
+              <p className="text-text-secondary text-sm">Technical systems and creative assets built for the platform.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {projects.filter(p => p.placeId && p.author !== 'Banana Studios Games').map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
-          </div>
-
-          {/* Sites & Documentation */}
-          <div>
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-2">Sites & Documentation</h2>
-              <p className="text-text-secondary text-sm">Localisation for web platforms, documentation, and Discord bots.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {projects.filter(p => !p.placeId).map((project) => (
+              {projects.filter(p => !p.tags.includes('Localisation')).map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>
@@ -226,4 +202,4 @@ const TranslationPage: React.FC = () => {
   );
 };
 
-export default TranslationPage;
+export default RobloxPage;

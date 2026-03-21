@@ -6,10 +6,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
 import About from './pages/About';
-import TranslationPage from './pages/TranslationPage';
-import DevelopmentPage from './pages/DevelopmentPage';
+import RobloxPage from './pages/RobloxPage';
+import EngineeringPage from './pages/EngineeringPage';
 
 export default function App() {
   return (
@@ -19,9 +18,8 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/translation" element={<TranslationPage />} />
-            <Route path="/development" element={<DevelopmentPage />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/roblox" element={<RobloxPage />} />
+            <Route path="/engineering" element={<EngineeringPage />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>

@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  category: 'Translation' | 'Development' | '3D Modelling' | 'Photography';
+  category: 'Roblox' | 'Engineering' | 'Photography' | 'Translation' | 'Development' | '3D Modelling';
   tags: string[];
   imageUrl?: string;
   link?: string;

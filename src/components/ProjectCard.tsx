@@ -39,9 +39,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         {project.author && (
           <p className="text-xs text-text-secondary mb-2">by {project.author}</p>
         )}
-        <p className="text-text-secondary text-sm line-clamp-2 mb-4">
-          {project.description}
-        </p>
       </div>
     </>
   );

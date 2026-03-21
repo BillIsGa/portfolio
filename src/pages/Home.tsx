@@ -9,9 +9,9 @@ const Home: React.FC = () => {
   const featuredProjects = PROJECTS.slice(0, 3);
 
   const services = [
-    { icon: <Globe size={24} />, title: 'Translation', desc: 'Chinese-English localisation for games & apps.' },
-    { icon: <Code size={24} />, title: 'Development', desc: 'Roblox scripting and UI/UX design.' },
-    { icon: <Box size={24} />, title: '3D Modelling', desc: 'SolidWorks CAD and low-poly assets.' },
+    { icon: <Globe size={24} />, title: 'Roblox Hub', desc: 'Full-stack Roblox services: Localisation, Dev & Design.' },
+    { icon: <Code size={24} />, title: 'Engineering', desc: 'Software development and technical systems.' },
+    { icon: <Box size={24} />, title: 'CAD Modelling', desc: 'Mechanical design and 3D assemblies in SolidWorks.' },
     { icon: <Camera size={24} />, title: 'Photography', desc: 'Urban street photography and urban life.' },
   ];
 
@@ -34,10 +34,10 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/projects"
+                to="/roblox"
                 className="bg-brand-default hover:bg-brand-hover text-white px-8 py-4 rounded-2xl font-semibold transition-all flex items-center gap-2 group"
               >
-                View My Work <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                Roblox Hub <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/about"
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
             <h2 className="text-3xl font-bold tracking-tight mb-2">Featured Projects</h2>
             <p className="text-text-secondary">A selection of my recent work across various disciplines.</p>
           </div>
-          <Link to="/projects" className="text-brand-default hover:text-brand-hover font-medium flex items-center gap-1">
+          <Link to="/roblox" className="text-brand-default hover:text-brand-hover font-medium flex items-center gap-1">
             View all <ArrowRight size={16} />
           </Link>
         </div>
@@ -101,11 +101,11 @@ const Home: React.FC = () => {
               I provide end-to-end services for Roblox creators, from complex Luau scripting and UI design to full Chinese-English localisation for global reach.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/development" className="bg-brand-default text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-hover transition-colors">
-                Explore Roblox Dev
+              <Link to="/roblox" className="bg-brand-default text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-hover transition-colors">
+                Explore Roblox Hub
               </Link>
-              <Link to="/translation" className="bg-button-bg-transparent text-text-default px-6 py-3 rounded-xl font-semibold hover:bg-button-bg-transparent-hover transition-colors">
-                Translation Services
+              <Link to="/engineering" className="bg-button-bg-transparent text-text-default px-6 py-3 rounded-xl font-semibold hover:bg-button-bg-transparent-hover transition-colors">
+                Engineering Projects
               </Link>
             </div>
           </div>

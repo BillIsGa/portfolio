@@ -18,9 +18,8 @@ export const Navbar: React.FC = () => {
 
   const navItems = [
     { label: 'Home', path: '/' },
-    { label: 'Translation', path: '/translation' },
-    { label: 'Development', path: '/development' },
-    { label: 'Projects', path: '/projects' },
+    { label: 'Roblox Hub', path: '/roblox' },
+    { label: 'Engineering', path: '/engineering' },
     { label: 'About', path: '/about' },
   ];
 
