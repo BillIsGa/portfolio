@@ -85,14 +85,19 @@ async function startServer() {
         if (!game) return null;
 
         const icon = iData.data?.find((i: any) => i.targetId === uid)?.imageUrl;
-        
+
+        const creatorName = game.creator?.type === 1
+          ? `@${game.creator.name}`
+          : game.creator?.name || 'Unknown';
+
         return {
           placeId: pid,
           universeId: uid,
           name: game.name,
           visits: game.visits,
           playing: game.playing,
-          iconUrl: icon
+          iconUrl: icon,
+          creator: creatorName
         };
       }).filter(Boolean);
 
