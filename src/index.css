@@ -36,14 +36,14 @@
 :root {
   /* Dark Mode (Default) */
   --brand-default: #4f7eee;
-  --brand-hover: #2563eb;
+  --brand-hover: #3b66d1;
   --text-default: #ffffff;
-  --text-secondary: #a1a1aa;
+  --text-secondary: #b1b1b1;
   --bg-primary: #323232;
-  --bg-input: #27272a;
-  --cta-bg: #0f1118;
-  --nav-bg-dark: #09090b;
-  --border-default: rgba(255, 255, 255, 0.1);
+  --bg-input: #2a2a2a;
+  --cta-bg: #242424;
+  --nav-bg-dark: #1e1e1e;
+  --border-default: rgba(255, 255, 255, 0.08);
   --button-bg-transparent: rgba(255, 255, 255, 0.05);
   --button-bg-transparent-hover: rgba(255, 255, 255, 0.1);
 }
