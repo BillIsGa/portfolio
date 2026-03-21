@@ -282,7 +282,7 @@ const RobloxPage: React.FC = () => {
                 <div className="aspect-[630/348] overflow-hidden">
                   <img src="/assets/AZDPSB.png" alt="Arizona Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-                <div className="aspect-[630/348] overflow-hidden">
+                <div className="aspect-[725/348] overflow-hidden">
                   <img src="/assets/AZDPSC.png" alt="Arizona Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
