@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   const featuredProjects = PROJECTS.slice(0, 3);
 
   const services = [
-    { icon: <Globe size={24} />, title: 'Roblox Hub', desc: 'Full-stack Roblox services: Localisation, Dev & Design.' },
+    { icon: <Globe size={24} />, title: 'Roblox', desc: 'Full-stack Roblox services: Localisation, Dev & Design.' },
     { icon: <Code size={24} />, title: 'Engineering', desc: 'Software development and technical systems.' },
     { icon: <Box size={24} />, title: 'CAD Modelling', desc: 'Mechanical design and 3D assemblies in SolidWorks.' },
     { icon: <Camera size={24} />, title: 'Photography', desc: 'Urban street photography and urban life.' },
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
                 to="/roblox"
                 className="bg-brand-default hover:bg-brand-hover text-white px-8 py-4 rounded-2xl font-semibold transition-all flex items-center gap-2 group"
               >
-                Roblox Hub <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                Roblox <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/about"
@@ -102,7 +102,7 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/roblox" className="bg-brand-default text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-hover transition-colors">
-                Explore Roblox Hub
+                Explore Roblox
               </Link>
               <Link to="/engineering" className="bg-button-bg-transparent text-text-default px-6 py-3 rounded-xl font-semibold hover:bg-button-bg-transparent-hover transition-colors">
                 Engineering Projects
