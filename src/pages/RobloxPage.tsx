@@ -156,7 +156,7 @@ const RobloxPage: React.FC = () => {
             {/* An Garda Síochána Section */}
             <div className="space-y-12">
               <div className="grid grid-cols-[725fr_350fr] gap-4">
-                <div className="aspect-[725/349] bg-cta-bg overflow-hidden">
+                <div className="aspect-[725/349] overflow-hidden">
                   <img src="/src/assets/GdaShirt.png" alt="Garda Template 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="aspect-[350/350] overflow-hidden">
