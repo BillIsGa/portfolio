@@ -230,18 +230,18 @@ const RobloxPage: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-[630fr_350fr_515fr] gap-4 items-center">
-                <div className="aspect-[630/348] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                <div className="aspect-[630/348] overflow-hidden">
                   <img src="/assets/GCPDJacket.png" alt="GCPD Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="aspect-[1141/1012] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <div className="aspect-[1141/1012] overflow-hidden">
                     <img src="/assets/GCPDBadge.png" alt="Badge 1" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                   </div>
-                  <div className="aspect-[976/1114] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                  <div className="aspect-[976/1114] overflow-hidden">
                     <img src="/assets/GCPDPatch.png" alt="Badge 2" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                   </div>
                 </div>
-                <div className="aspect-[515/705] bg-cta-bg border border-border-default rounded-lg overflow-hidden">
+                <div className="aspect-[515/705] overflow-hidden">
                   <img src="/assets/GCPDRef.png" alt="GCPD Reference" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
               </div>
