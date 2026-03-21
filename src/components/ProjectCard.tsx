@@ -29,7 +29,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div />
           {project.visits && (
             <span className="text-[10px] font-bold text-text-secondary">
-              {project.visits} Visits
+              {project.visits}
             </span>
           )}
         </div>

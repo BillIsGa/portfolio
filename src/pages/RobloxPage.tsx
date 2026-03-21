@@ -163,10 +163,12 @@ const RobloxPage: React.FC = () => {
             <h3 className="font-bold mb-2">Development</h3>
             <p className="text-text-secondary text-sm">Specialising in Luau-based GUI systems and front-end game mechanics.</p>
           </div>
-          <div className="p-8 bg-cta-bg rounded-3xl border border-border-default">
-            <Shirt className="text-brand-default mb-4" size={24} />
-            <h3 className="font-bold mb-2">Avatar Assets</h3>
-            <p className="text-text-secondary text-sm">Custom clothing design and 2D asset creation for the Roblox marketplace.</p>
+          <div className="p-8 bg-cta-bg rounded-3xl border border-border-default hover:border-brand-default/30 transition-colors group">
+            <Link to="/clothing">
+              <Shirt className="text-brand-default mb-4 group-hover:scale-110 transition-transform" size={24} />
+              <h3 className="font-bold mb-2">Avatar Assets</h3>
+              <p className="text-text-secondary text-sm">Custom clothing design and 2D asset creation for the Roblox marketplace.</p>
+            </Link>
           </div>
         </div>
 

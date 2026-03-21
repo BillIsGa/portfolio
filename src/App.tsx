@@ -11,6 +11,7 @@ import RobloxPage from './pages/RobloxPage';
 import EngineeringPage from './pages/EngineeringPage';
 import TranslationPage from './pages/TranslationPage';
 import LeavingCertPage from './pages/LeavingCertPage';
+import ClothingPage from './pages/ClothingPage';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/roblox" element={<RobloxPage />} />
+            <Route path="/clothing" element={<ClothingPage />} />
             <Route path="/engineering" element={<EngineeringPage />} />
             <Route path="/translation" element={<TranslationPage />} />
             <Route path="/leaving-cert" element={<LeavingCertPage />} />
@@ -30,9 +32,9 @@ export default function App() {
         
         <footer className="border-t border-border-default py-12 mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-brand-default font-bold text-xl tracking-tighter">VEXORIAN.</div>
+            <div className="text-brand-default font-bold text-xl tracking-tighter">Channers</div>
             <div className="text-text-secondary text-sm">
-              © {new Date().getFullYear()} Billy Chan. All rights reserved.
+              © {new Date().getFullYear()} Billy chna. All rights reserved.
             </div>
             <div className="flex gap-6 text-sm font-medium text-text-secondary">
               <a href="#" className="hover:text-text-default transition-colors">Twitter</a>

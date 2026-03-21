@@ -19,6 +19,7 @@ export const Navbar: React.FC = () => {
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'Roblox', path: '/roblox' },
+    { label: 'Clothing', path: '/clothing' },
     { label: 'Translation', path: '/translation' },
     { label: 'Engineering', path: '/engineering' },
     { label: 'Leaving Cert', path: '/leaving-cert' },
@@ -31,7 +32,7 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="text-xl font-bold tracking-tighter text-brand-default">
-              CHANNERS
+              Channers
             </Link>
           </div>
           

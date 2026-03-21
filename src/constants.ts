@@ -126,12 +126,23 @@ export const PROJECTS: Project[] = [
     id: 'voicemaster',
     title: 'voicemaster.xyz Documentation',
     author: 'VoiceMaster',
-    visits: '455k+ Servers',
+    visits: '455,000+ Servers',
     description: 'Full documentation localisation for the VoiceMaster Discord bot.',
     category: 'Translation',
     tags: ['Localisation', 'Discord'],
     imageUrl: 'https://cdn.discordapp.com/icons/444255171460071446/a_d96af2c36f5b7f6f4b7d6ad52f1505f1.gif?size=1024',
     link: 'https://voicemaster.xyz/docs-category/help/'
+  },
+  {
+    id: 'hyperpenguin',
+    title: 'hyperpenguin.com',
+    author: 'Hyper Penguin',
+    visits: '-',
+    description: 'Localisation and web presence support for hyperpenguin.com.',
+    category: 'Translation',
+    tags: ['Localisation', 'Web'],
+    imageUrl: 'https://www.dropbox.com/scl/fi/b8xwzm83smxblgqe1krpb/image_2025-06-26_134438809.png?rlkey=loocyy03un9oixxxmmi8edgsk&st=urvjmkh6&raw=1',
+    link: 'https://sites.google.com/view/billychansportfolio/error/discontinued'
   },
   {
     id: 'legal-doc-translation',
@@ -177,10 +188,11 @@ export const PROJECTS: Project[] = [
     id: 'roblox-clothing',
     title: 'Roblox Clothing Collection',
     author: 'PlayzBilly',
-    description: 'Custom designed clothing assets for Roblox avatars, featuring modern street styles and tactical gear.',
+    description: 'Custom designed clothing assets for Roblox avatars, featuring law enforcement uniforms from around the world.',
     category: 'Roblox',
     tags: ['Clothing', 'Design', '2D Art'],
     imageUrl: 'https://picsum.photos/seed/roblox-clothing/800/600',
+    link: '/clothing'
   },
   {
     id: 'solidworks-assembly',
