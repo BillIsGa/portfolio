@@ -15,9 +15,9 @@ const About: React.FC = () => {
             <h1 className="text-4xl font-bold tracking-tight mb-8">About Me</h1>
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
               <p>
-                Hello! I'm Billy, a 16-year-old designer, developer, and translator based in Ireland. 
-                I am also known as <span className="text-text-default font-medium">Channers</span> or <span className="text-text-default font-medium">unknown_games</span> on Discord, 
-                and <span className="text-text-default font-medium">VexorianDev</span> or <span className="text-text-default font-medium">BiLLYGeGe2</span> on Roblox.
+                Hello! I'm <span className="text-text-default font-medium">Billy</span>, a designer, developer, and translator based in Ireland. 
+                I am also known as <span className="text-text-default font-medium">Channers (unknown_games)</span> on Discord, 
+                and <span className="text-text-default font-medium">VexorianDev (BiLLYGeGe2)</span> on Roblox.
               </p>
               <p>
                 I work across Chinese-English translation and localisation, UI/UX design, programming, 3D CAD modelling, and photography. 

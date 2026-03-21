@@ -29,7 +29,7 @@ const Home: React.FC = () => {
               Designing <span className="text-brand-default">digital</span> experiences with precision.
             </h1>
             <p className="text-xl text-text-secondary mb-10 leading-relaxed">
-              I'm Billy, a 16-year-old designer, developer, and translator based in Ireland. 
+              I'm <span className="text-text-default font-medium">Billy</span>, a designer, developer, and translator based in Ireland. 
               I combine creative and technical skills to produce clear, user-focused digital work.
             </p>
             <div className="flex flex-wrap gap-4">

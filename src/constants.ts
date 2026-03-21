@@ -112,6 +112,17 @@ export const PROJECTS: Project[] = [
     placeId: '16446142514'
   },
   {
+    id: 'scary-shawarma',
+    title: 'Scary Shawarma Kiosk: the ANOMALY',
+    author: 'The Anomaly',
+    description: 'A horror experience on Roblox featuring unique gameplay mechanics and immersive environments.',
+    category: 'Roblox',
+    tags: ['Roblox', 'Development', 'Horror', 'Scripting'],
+    imageUrl: 'https://tr.rbxcdn.com/180DAY-f780e08711932f2b53a4f62135d24b6c/256/256/Image/Webp/noFilter',
+    link: 'https://www.roblox.com/games/137826330724902/Scary-Shawarma-Kiosk-the-ANOMALY',
+    placeId: '137826330724902'
+  },
+  {
     id: 'voicemaster',
     title: 'voicemaster.xyz Documentation',
     author: 'VoiceMaster',

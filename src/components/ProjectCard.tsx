@@ -37,8 +37,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {project.title}
         </h3>
         {project.author && (
-          <p className="text-xs text-text-secondary mb-2">by {project.author}</p>
+          <p className="text-xs text-text-secondary mb-3">by {project.author}</p>
         )}
+        <div className="flex flex-wrap gap-2 mt-auto">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="px-2 py-1 bg-brand-default/5 text-brand-default text-[10px] font-medium rounded-md border border-brand-default/10"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </>
   );

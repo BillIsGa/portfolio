@@ -99,7 +99,7 @@ const RobloxPage: React.FC = () => {
               <div className="p-3 bg-brand-default/10 text-brand-default rounded-2xl">
                 <Layout size={32} />
               </div>
-              <h1 className="text-4xl font-bold tracking-tight">Roblox Hub</h1>
+              <h1 className="text-4xl font-bold tracking-tight">Roblox</h1>
             </div>
             <button 
               onClick={fetchLiveStats}
