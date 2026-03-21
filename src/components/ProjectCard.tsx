@@ -26,14 +26,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       
       <div className="p-6">
         <div className="flex items-center justify-between mb-3">
-          {project.isLive ? (
-            <div className="flex items-center gap-1.5 px-2 py-0.5 bg-emerald-500/10 rounded-full border border-emerald-500/20">
-              <div className="w-1 h-1 bg-emerald-500 rounded-full animate-pulse" />
-              <span className="text-[9px] font-bold text-emerald-600 uppercase tracking-tighter">Live Stats</span>
-            </div>
-          ) : (
-            <div />
-          )}
+          <div />
           {project.visits && (
             <span className="text-[10px] font-bold text-text-secondary">
               {project.visits} Visits

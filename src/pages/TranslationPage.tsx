@@ -8,34 +8,25 @@ import { Project } from '../types';
 
 const TranslationPage: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>(PROJECTS.filter(p => p.category === 'Translation'));
-  const [totalVisits, setTotalVisits] = useState(() => {
-    let total = 0;
-    PROJECTS.filter(p => p.category === 'Translation').forEach(p => {
-      if (p.visits) {
-        const cleanVisits = p.visits.replace(/,/g, '');
-        const match = cleanVisits.match(/([\d.]+)([BMk]?)/);
-        if (match) {
-          const val = parseFloat(match[1]);
-          const unit = match[2];
-          const mult = unit === 'B' ? 1000000000 : unit === 'M' ? 1000000 : unit === 'k' ? 1000 : 1;
-          total += val * mult;
-        }
-      }
-    });
-    return total;
-  });
-  const [isLoading, setIsLoading] = useState(false);
+  const [totalVisits, setTotalVisits] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [lastSynced, setLastSynced] = useState<string>(new Date().toLocaleTimeString());
 
   const fetchLiveStats = async () => {
     const robloxProjects = projects.filter(p => p.placeId);
-    if (robloxProjects.length === 0) return;
+    if (robloxProjects.length === 0) {
+      setIsLoading(false);
+      return;
+    }
 
     setIsLoading(true);
     try {
       const placeIds = robloxProjects.map(p => p.placeId).join(',');
-      // Use the Web Service URL if provided, otherwise fallback to relative path
       const apiUrl = import.meta.env.VITE_API_URL || '';
       const response = await fetch(`${apiUrl}/api/roblox/games?placeIds=${placeIds}`);
+      
+      if (!response.ok) throw new Error('Failed to fetch live data');
+      
       const liveData = await response.json();
 
       if (Array.isArray(liveData) && liveData.length > 0) {
@@ -51,8 +42,10 @@ const TranslationPage: React.FC = () => {
               description: `${p.description} (Live: ${live.playing.toLocaleString()} playing now)`,
               isLive: true
             };
-          } else if (p.visits) {
-            // Add static visits to total if live data not found
+          }
+          
+          // Fallback for non-Roblox or missing live data
+          if (p.visits) {
             const cleanVisits = p.visits.replace(/,/g, '');
             const match = cleanVisits.match(/([\d.]+)([BMk]?)/);
             if (match) {
@@ -67,33 +60,28 @@ const TranslationPage: React.FC = () => {
 
         setProjects(updatedProjects);
         setTotalVisits(newTotal);
-      } else {
-        console.warn("Roblox API returned no data or invalid format, using static fallback.");
-        calculateStaticTotal();
+        setLastSynced(new Date().toLocaleTimeString());
       }
     } catch (error) {
       console.error("Failed to fetch live stats:", error);
-      calculateStaticTotal();
+      // If live fetch fails, calculate from whatever static data we have
+      let staticTotal = 0;
+      projects.forEach(p => {
+        if (p.visits) {
+          const cleanVisits = p.visits.replace(/,/g, '');
+          const match = cleanVisits.match(/([\d.]+)([BMk]?)/);
+          if (match) {
+            const val = parseFloat(match[1]);
+            const unit = match[2];
+            const mult = unit === 'B' ? 1000000000 : unit === 'M' ? 1000000 : unit === 'k' ? 1000 : 1;
+            staticTotal += val * mult;
+          }
+        }
+      });
+      setTotalVisits(staticTotal);
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const calculateStaticTotal = () => {
-    let staticTotal = 0;
-    projects.forEach(p => {
-      if (p.visits) {
-        const cleanVisits = p.visits.replace(/,/g, '');
-        const match = cleanVisits.match(/([\d.]+)([BMk]?)/);
-        if (match) {
-          const val = parseFloat(match[1]);
-          const unit = match[2];
-          const mult = unit === 'B' ? 1000000000 : unit === 'M' ? 1000000 : unit === 'k' ? 1000 : 1;
-          staticTotal += val * mult;
-        }
-      }
-    });
-    setTotalVisits(staticTotal);
   };
 
   useEffect(() => {
@@ -158,17 +146,17 @@ const TranslationPage: React.FC = () => {
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-4">
                   <h3 className="text-white/80 uppercase tracking-widest text-xs font-bold">Live Global Impact</h3>
-                  <div className="flex items-center gap-1.5 px-2 py-0.5 bg-white/20 rounded-full">
-                    <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-[10px] font-bold uppercase tracking-tighter">Live</span>
-                  </div>
                 </div>
                 <div className="text-4xl md:text-5xl font-bold mb-2 tracking-tighter">
-                  <AnimatedCounter value={totalVisits} />
+                  {isLoading && totalVisits === 0 ? (
+                    <span className="opacity-50">Loading...</span>
+                  ) : (
+                    <AnimatedCounter value={totalVisits} />
+                  )}
                 </div>
                 <p className="text-white/90 font-medium text-sm">Total verified user interactions across all projects.</p>
                 <p className="text-white/60 text-[10px] mt-4 uppercase tracking-widest">
-                  Last synced: {new Date().toLocaleTimeString()}
+                  {isLoading ? "Syncing with Roblox..." : `Last synced: ${lastSynced}`}
                 </p>
               </div>
             </div>

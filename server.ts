@@ -50,14 +50,21 @@ async function startServer() {
       // 1. Resolve missing Universe IDs
       const missingIds = idArray.filter(pid => !placeToUniverse.has(pid));
       if (missingIds.length > 0) {
+        console.log(`[Roblox Proxy] Resolving universe IDs for: ${missingIds.join(",")}`);
         const pRes = await fetch(`https://games.roblox.com/v1/games/multiget-place-details?placeIds=${missingIds.join(",")}`, { headers });
         if (pRes.ok) {
           const data = await pRes.json();
-          if (Array.isArray(data)) {
-            data.forEach((pd: any) => {
-              if (pd.universeId) placeToUniverse.set(pd.placeId.toString(), pd.universeId);
+          const details = data?.data || data;
+          if (Array.isArray(details)) {
+            details.forEach((pd: any) => {
+              if (pd.universeId) {
+                console.log(`[Roblox Proxy] Resolved: Place ${pd.placeId} -> Universe ${pd.universeId}`);
+                placeToUniverse.set(pd.placeId.toString(), pd.universeId);
+              }
             });
           }
+        } else {
+          console.error(`[Roblox Proxy] Place details API failed: ${pRes.status} ${pRes.statusText}`);
         }
       }
 
@@ -69,13 +76,26 @@ async function startServer() {
 
       // 2. Fetch Game Details & Icons
       const uIdsStr = universeIds.join(",");
-      const [gRes, iRes] = await Promise.all([
+      console.log(`[Roblox Proxy] Fetching details for universeIds: ${uIdsStr}`);
+      
+      const [gRes, iRes] = await Promise.allSettled([
         fetch(`https://games.roblox.com/v1/games?universeIds=${uIdsStr}`, { headers }),
         fetch(`https://thumbnails.roblox.com/v1/games/icons?universeIds=${uIdsStr}&size=512x512&format=Png&isCircular=false`, { headers })
       ]);
 
-      const gData = gRes.ok ? await gRes.json() : { data: [] };
-      const iData = iRes.ok ? await iRes.json() : { data: [] };
+      let gData = { data: [] };
+      if (gRes.status === 'fulfilled' && gRes.value.ok) {
+        gData = await gRes.value.json();
+      } else {
+        console.error("[Roblox Proxy] Games API failed", gRes.status === 'rejected' ? gRes.reason : 'status not ok');
+      }
+
+      let iData = { data: [] };
+      if (iRes.status === 'fulfilled' && iRes.value.ok) {
+        iData = await iRes.value.json();
+      } else {
+        console.error("[Roblox Proxy] Icons API failed", iRes.status === 'rejected' ? iRes.reason : 'status not ok');
+      }
 
       const results = idArray.map(pid => {
         const uid = placeToUniverse.get(pid);
