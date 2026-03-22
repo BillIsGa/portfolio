@@ -64,10 +64,6 @@ const RobloxPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-default/10 text-brand-default text-xs font-bold uppercase tracking-wider">
-                    <Globe size={14} />
-                    <span>Global Reach</span>
-                  </div>
                   <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
                     Bridging the gap with <span className="text-brand-default">Chinese Localisation</span>
                   </h2>
