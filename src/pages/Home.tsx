@@ -258,7 +258,7 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Photography Teaser */}
+        {/*
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -279,7 +279,7 @@ const Home: React.FC = () => {
               See more <ArrowRight size={16} />
             </Link>
           </div>
-{/*}
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-border-default group">
               <img
