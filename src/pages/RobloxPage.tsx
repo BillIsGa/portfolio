@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 import { ProjectCard } from '../components/ProjectCard';
-import { Globe, Languages, Layout, Award, Users, RefreshCw, ExternalLink, Code2, Shirt, ArrowRight } from 'lucide-react';
+import { Globe, Languages, Layout, Award, Users, RefreshCw, ExternalLink, Code2, Shirt, ArrowRight, Twitter, MessageSquare } from 'lucide-react';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { Project } from '../types';
 
@@ -102,7 +102,7 @@ const RobloxPage: React.FC = () => {
                 <div className="absolute -inset-4 bg-brand-default/5 rounded-[3rem] blur-2xl -z-10" />
                 <div className="bg-cta-bg rounded-[2.5rem] border border-border-default p-8 shadow-xl">
                   <div className="flex flex-col sm:flex-row items-center gap-8">
-                    <div className="w-32 h-32 shrink-0 overflow-hidden flex items-center justify-center p-4 group hover:border-brand-default transition-colors">
+                    <div className="w-32 h-32 shrink-0 rounded-2xl overflow-hidden border border-border-default shadow-md bg-white flex items-center justify-center p-4 group hover:border-brand-default transition-colors">
                       <img 
                         src="/assets/ITSLogo.png" 
                         alt="International Translation Services Logo" 
@@ -114,7 +114,7 @@ const RobloxPage: React.FC = () => {
                       <div className="space-y-2">
                         <h3 className="text-xl font-bold">ITS Member</h3>
                         <p className="text-text-secondary text-sm leading-relaxed">
-                          Proud member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>. Join us to access professional localization across dozens of languages.
+                          Proud member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>. Join us to access professional localisation across dozens of languages.
                         </p>
                       </div>
                       
@@ -158,7 +158,44 @@ const RobloxPage: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-16"
           >
-            <p>Soon</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 rounded-[2.5rem] overflow-hidden border border-border-default shadow-xl">
+                <img 
+                  src="https://picsum.photos/seed/roblox-dev/800/600" 
+                  alt="Roblox Development" 
+                  className="w-full h-auto"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="space-y-6 order-1 lg:order-2">
+                <h2 className="text-3xl font-bold tracking-tight">Technical Development</h2>
+                <p className="text-text-secondary text-lg leading-relaxed">
+                  Specialising in <span className="text-text-default font-semibold">Luau scripting</span> and advanced GUI systems. I build robust, scalable front-end mechanics that enhance player immersion and experience.
+                </p>
+                <ul className="space-y-3">
+                  {['Custom Phone & UI Systems', 'Advanced Vehicle Mechanics', 'DataStore Management', 'Optimised Game Loops'].map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-text-secondary">
+                      <div className="w-1.5 h-1.5 rounded-full bg-brand-default" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-text-secondary">
+                  From intuitive menu systems to complex interactive objects, I focus on clean code and performant implementation.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold mb-8">Development Projects</h3>
+              <div className="flex flex-wrap justify-center gap-6">
+                {projects.filter(p => p.tags.includes('Development') || p.tags.includes('Scripting') || p.tags.includes('UI/UX')).map((project) => (
+                  <div key={project.id} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] max-w-[320px]">
+                    <ProjectCard project={project} />
+                  </div>
+                ))}
+              </div>
+            </div>
           </motion.div>
         );
       case 'Clothing':
@@ -170,9 +207,6 @@ const RobloxPage: React.FC = () => {
           >
             {/* An Garda Síochána Section */}
             <div className="space-y-12">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold border-b border-border-default pb-4 inline-block px-8">An Garda Síochána</h2>
-              </div>
               <div className="grid grid-cols-1 md:grid-cols-[725fr_350fr] gap-8">
                 <div className="aspect-[725/348] overflow-hidden">
                   <img src="/assets/GdaShirt.png" alt="Garda shirts and gilets" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -187,6 +221,7 @@ const RobloxPage: React.FC = () => {
                   <img src="/assets/ASUFleece.png" alt="ASU Fleece" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="flex-1 space-y-4">
+                  <h2 className="text-xl font-bold">An Garda Síochána</h2>
                   <div className="text-sm text-text-secondary space-y-4 leading-relaxed">
                     <p>
                       An Garda Síochána is the national police and security force for the Republic of Ireland. 
@@ -231,6 +266,7 @@ const RobloxPage: React.FC = () => {
                   <img src="/assets/GCPDShirt.png" alt="GCPD standard" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="space-y-4">
+                  <h3 className="text-lg font-bold">Gotham City Police Department</h3>
                   <div className="text-sm text-text-secondary space-y-4 leading-relaxed">
                     <p>
                       The GCPD is a fictional police department from the Batman universe. There have been many versions of the uniform, 
@@ -298,9 +334,22 @@ const RobloxPage: React.FC = () => {
                 <div className="aspect-[630/348] overflow-hidden">
                   <img src="/assets/AZDPSB.png" alt="Arizona Template 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
-                <div className="aspect-[725/348] overflow-hidden">
-                  <img src="/assets/AZDPSC.png" alt="AZDPS C" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <div className="aspect-[630/348] overflow-hidden">
+                  <img src="/assets/AZDPSC.png" alt="Arizona Template 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
+              </div>
+            </div>
+
+
+
+            <div className="pt-12 border-t border-border-default">
+              <h3 className="text-2xl font-bold mb-8">Clothing Portfolio</h3>
+              <div className="flex flex-wrap justify-center gap-6">
+                {projects.filter(p => p.tags.includes('Clothing')).map((project) => (
+                  <div key={project.id} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] max-w-[320px]">
+                    <ProjectCard project={project} />
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -315,9 +364,11 @@ const RobloxPage: React.FC = () => {
               <h2 className="text-3xl font-bold mb-2">Project Library</h2>
               <p className="text-text-secondary text-sm">Browse through my complete portfolio of Roblox work.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="flex flex-wrap justify-center gap-6">
               {sortedProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+                <div key={project.id} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] max-w-[320px]">
+                  <ProjectCard project={project} />
+                </div>
               ))}
             </div>
           </motion.div>
@@ -344,14 +395,12 @@ const RobloxPage: React.FC = () => {
         let numericVisits = p.numericVisits || 0;
         let visitsStr = p.visits || '0';
         let imageUrl = p.imageUrl;
-        let author = p.author;
         let isLive = false;
 
         if (live) {
           numericVisits = live.visits;
           visitsStr = live.visits.toLocaleString();
           imageUrl = live.iconUrl || p.imageUrl;
-          author = live.creator || p.author;
           isLive = true;
         } else if (p.visits) {
           numericVisits = parseVisits(p.visits);
@@ -364,7 +413,6 @@ const RobloxPage: React.FC = () => {
           visits: visitsStr,
           numericVisits,
           imageUrl,
-          author,
           isLive
         };
       });
@@ -460,9 +508,11 @@ const RobloxPage: React.FC = () => {
             <h2 className="text-2xl font-bold mb-2">Top Contributions</h2>
             <p className="text-text-secondary text-sm">High-impact experiences with the largest player counts.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {topThree.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <div key={project.id} className="w-full md:w-[calc(33.333%-22px)] max-w-[320px]">
+                <ProjectCard project={project} />
+              </div>
             ))}
           </div>
         </div>
