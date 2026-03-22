@@ -6,11 +6,8 @@ import { PROJECTS } from '../constants';
 import { ProjectCard } from '../components/ProjectCard';
 
 const Home: React.FC = () => {
-  const featuredProjects = [
-    PROJECTS.find(p => p.id === 'pls-donate')!,
-    PROJECTS.find(p => p.id === 'voicemaster')!,
-    PROJECTS.find(p => p.id === 'lc-dcg-project')!,
-  ];
+  const featuredIds = ['pls-donate', 'voicemaster', 'lc-dcg-project'];
+  const featuredProjects = PROJECTS.filter(p => featuredIds.includes(p.id));
 
   const services = [
     { icon: <Globe size={24} />, title: 'Translation', desc: 'Professional Chinese-English localisation for apps and docs.' },
