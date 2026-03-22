@@ -122,7 +122,7 @@ export const PROJECTS: Project[] = [
     visits: '900M+',
     description: 'A horror experience on Roblox featuring unique gameplay mechanics and immersive environments.',
     category: 'Roblox',
-    tags: ['Development', 'Horror', 'Scripting'],
+    tags: ['Development'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-f780e08711932f2b53a4f62135d24b6c/256/256/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/137826330724902/Scary-Shawarma-Kiosk-the-ANOMALY',
     placeId: '137826330724902'
@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
     visits: '900M+',
     description: 'A horror experience on Roblox featuring unique gameplay mechanics and immersive environments.',
     category: 'Roblox',
-    tags: ['Development', 'Horror', 'Scripting'],
+    tags: ['Localisation'],
     imageUrl: 'https://tr.rbxcdn.com/180DAY-f780e08711932f2b53a4f62135d24b6c/256/256/Image/Webp/noFilter',
     link: 'https://www.roblox.com/games/14044143732/Future-Chicken-Obby',
     placeId: '14044143732'
