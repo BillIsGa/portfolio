@@ -155,6 +155,9 @@ const RobloxPage: React.FC = () => {
           >
             {/* An Garda Síochána Section */}
             <div className="space-y-12">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold border-b border-border-default pb-4 inline-block px-8">An Garda Síochána</h2>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-[725fr_350fr] gap-8">
                 <div className="aspect-[725/348] overflow-hidden">
                   <img src="/assets/GdaShirt.png" alt="Garda shirts and gilets" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -169,7 +172,6 @@ const RobloxPage: React.FC = () => {
                   <img src="/assets/ASUFleece.png" alt="ASU Fleece" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="flex-1 space-y-4">
-                  <h2 className="text-xl font-bold">An Garda Síochána</h2>
                   <div className="text-sm text-text-secondary space-y-4 leading-relaxed">
                     <p>
                       An Garda Síochána is the national police and security force for the Republic of Ireland. 
@@ -214,7 +216,6 @@ const RobloxPage: React.FC = () => {
                   <img src="/assets/GCPDShirt.png" alt="GCPD standard" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-lg font-bold">Gotham City Police Department</h3>
                   <div className="text-sm text-text-secondary space-y-4 leading-relaxed">
                     <p>
                       The GCPD is a fictional police department from the Batman universe. There have been many versions of the uniform, 
