@@ -301,12 +301,14 @@ const Home: React.FC = () => {
           <p className="text-center text-text-secondary mt-6 text-sm italic">
             Mainly using a Sony CyberShot DSC-RX100 Mark I.
           </p>
-          */}
+
         </motion.div>
+        */}
       </section>
 
     </div>
   );
 };
+
 
 export default Home;
