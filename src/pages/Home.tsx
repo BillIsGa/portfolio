@@ -40,12 +40,6 @@ const Home: React.FC = () => {
               >
                 View My Work <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                to="/#about"
-                className="bg-button-bg-transparent hover:bg-button-bg-transparent-hover text-text-default px-8 py-4 rounded-2xl font-semibold transition-all"
-              >
-                About Me
-              </Link>
             </div>
           </motion.div>
         </div>
