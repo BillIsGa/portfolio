@@ -430,7 +430,7 @@ const RobloxPage: React.FC = () => {
                 </div>
               </div>
               <p className="text-text-secondary leading-relaxed">
-                I take pride in quality over quantity — every project gets the same attention to detail regardless of scope.
+                I take pride in quality over quantity, every project gets the same attention to detail regardless of scope.
               </p>
             </div>
 
