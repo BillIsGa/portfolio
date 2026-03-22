@@ -449,7 +449,7 @@ const RobloxPage: React.FC = () => {
                     <AnimatedCounter value={totalVisits} />
                   )}
                 </div>
-                <p className="text-white/90 font-medium text-sm">known user interactions</p>
+                <p className="text-white/90 font-medium text-sm">game visits</p>
                 <p className="text-white/60 text-[10px] mt-4 uppercase tracking-widest">
                   {isLoading ? "Syncing with Roblox..." : `Last synced: ${lastSynced}`}
                 </p>
