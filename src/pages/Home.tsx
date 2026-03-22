@@ -71,7 +71,6 @@ const Home: React.FC = () => {
     { value: '7B+', label: 'Combined visits across localised games' },
     { value: '10+', label: 'Shipped projects' },
     { value: 'C1', label: 'Certified English proficiency' },
-    { value: '4', label: 'Disciplines' },
   ];
 
   return (
