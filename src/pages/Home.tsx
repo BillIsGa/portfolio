@@ -1,13 +1,64 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Code, Box, Camera, Mail, Github, Twitter, Instagram } from 'lucide-react';
 import { PROJECTS } from '../constants';
 import { ProjectCard } from '../components/ProjectCard';
+import { Project } from '../types';
 
 const Home: React.FC = () => {
   const featuredIds = ['pls-donate', 'voicemaster', 'lc-dcg-project'];
-  const featuredProjects = PROJECTS.filter(p => featuredIds.includes(p.id));
+
+  const parseVisits = (visits?: string): number => {
+    if (!visits) return 0;
+    const cleanVisits = visits.replace(/,/g, '');
+    const match = cleanVisits.match(/([\d.]+)([BMk]?)/);
+    if (match) {
+      const val = parseFloat(match[1]);
+      const unit = match[2];
+      const mult = unit === 'B' ? 1000000000 : unit === 'M' ? 1000000 : unit === 'k' ? 1000 : 1;
+      return val * mult;
+    }
+    return 0;
+  };
+
+  const [featuredProjects, setFeaturedProjects] = useState<Project[]>(
+    PROJECTS.filter(p => featuredIds.includes(p.id))
+  );
+
+  useEffect(() => {
+    const fetchLiveData = async () => {
+      const robloxFeatured = featuredProjects.filter(p => p.placeId);
+      if (robloxFeatured.length === 0) return;
+
+      try {
+        const placeIds = robloxFeatured.map(p => p.placeId).join(',');
+        const apiUrl = import.meta.env.VITE_API_URL || '';
+        const response = await fetch(`${apiUrl}/api/roblox/games?placeIds=${placeIds}&_t=${Date.now()}`);
+        if (!response.ok) return;
+
+        const liveData = await response.json();
+        if (!Array.isArray(liveData) || liveData.length === 0) return;
+
+        setFeaturedProjects(prev => prev.map(p => {
+          const live = liveData.find((ld: any) => ld.placeId === p.placeId);
+          if (!live) return p;
+          return {
+            ...p,
+            visits: live.visits.toLocaleString(),
+            numericVisits: live.visits,
+            imageUrl: live.iconUrl || p.imageUrl,
+            author: live.creator || p.author,
+            isLive: true,
+          };
+        }));
+      } catch (error) {
+        console.error('Failed to fetch live data for featured projects:', error);
+      }
+    };
+
+    fetchLiveData();
+  }, []);
 
   const services = [
     { icon: <Globe size={24} />, title: 'Translation', desc: 'Chinese-English localisation for games, apps, and digital platforms.' },
@@ -17,7 +68,7 @@ const Home: React.FC = () => {
   ];
 
   const stats = [
-    { value: '1B+', label: 'Combined visits across localised games' },
+    { value: '7B+', label: 'Combined visits across localised games' },
     { value: '10+', label: 'Shipped projects' },
     { value: 'C1', label: 'Certified English proficiency' },
     { value: '4', label: 'Disciplines' },
