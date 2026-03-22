@@ -420,7 +420,7 @@ const RobloxPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <p className="text-text-secondary text-lg leading-relaxed">
-                I've contributed to some of the biggest games on the platform, providing <span className="text-text-default font-semibold">Chinese localisation</span>, Luau scripting, custom avatar clothing, and more.
+                I've contributed to some of the biggest games on the platform, providing Chinese localisation, Luau scripting, custom avatar clothing, and more.
               </p>
               <div className="flex items-start gap-4 p-6 bg-cta-bg rounded-3xl border border-border-default">
                 <Users className="text-brand-default shrink-0" size={24} />
