@@ -6,7 +6,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import Home from './pages/Home';
-import About from './pages/About';
 import RobloxPage from './pages/RobloxPage';
 import EngineeringPage from './pages/EngineeringPage';
 import TranslationPage from './pages/TranslationPage';
@@ -26,7 +25,6 @@ export default function App() {
             <Route path="/engineering" element={<Navigate to="/roblox?tab=Development" replace />} />
             <Route path="/translation" element={<Navigate to="/roblox?tab=Localisation" replace />} />
             <Route path="/leaving-cert" element={<LeavingCertPage />} />
-            <Route path="/about" element={<About />} />
           </Routes>
         </main>
         
