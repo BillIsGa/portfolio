@@ -108,42 +108,7 @@ const RobloxPage: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-16"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1 rounded-[2.5rem] overflow-hidden border border-border-default shadow-xl">
-                <img 
-                  src="https://picsum.photos/seed/roblox-dev/800/600" 
-                  alt="Roblox Development" 
-                  className="w-full h-auto"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="space-y-6 order-1 lg:order-2">
-                <h2 className="text-3xl font-bold tracking-tight">Technical Development</h2>
-                <p className="text-text-secondary text-lg leading-relaxed">
-                  Specialising in <span className="text-text-default font-semibold">Luau scripting</span> and advanced GUI systems. I build robust, scalable front-end mechanics that enhance player immersion and experience.
-                </p>
-                <ul className="space-y-3">
-                  {['Custom Phone & UI Systems', 'Advanced Vehicle Mechanics', 'DataStore Management', 'Optimised Game Loops'].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-text-secondary">
-                      <div className="w-1.5 h-1.5 rounded-full bg-brand-default" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-text-secondary">
-                  From intuitive menu systems to complex interactive objects, I focus on clean code and performant implementation.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-8">Development Projects</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {projects.filter(p => p.tags.includes('Development') || p.tags.includes('Scripting') || p.tags.includes('UI/UX')).map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
-              </div>
-            </div>
+            <p>Soon</p>
           </motion.div>
         );
       case 'Clothing':
