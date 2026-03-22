@@ -59,37 +59,68 @@ const RobloxPage: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="space-y-16"
+            className="space-y-24"
           >
-            <div className="max-w-4xl mx-auto text-center space-y-12 py-12">
-              <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight">
-                  I specialize in Chinese and bring experience in providing localization services.
-                </h2>
-                <div className="flex justify-center py-4">
-                  <div className="p-3 bg-cta-bg rounded-xl border border-border-default shadow-sm">
-                    <Languages className="text-brand-default" size={32} />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-default/10 text-brand-default text-xs font-bold uppercase tracking-wider">
+                    <Globe size={14} />
+                    <span>Global Reach</span>
                   </div>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-semibold text-text-secondary">
-                  Additionally, I hold a certified reading score of <span className="text-text-default underline decoration-brand-default underline-offset-8">C1 Advanced</span> on the CEFR scale.
-                </h3>
-              </div>
-
-              <div className="pt-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-left border-t border-border-default">
-                <div className="space-y-6">
+                  <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+                    Bridging the gap with <span className="text-brand-default">Chinese Localisation</span>
+                  </h2>
                   <p className="text-xl text-text-secondary leading-relaxed">
-                    I am also a member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>, which you can join to access localization services from various languages!
+                    I specialize in Chinese and bring extensive experience in providing localization services that ensure cultural resonance and player retention.
                   </p>
                 </div>
-                <div className="flex justify-center md:justify-end">
-                  <div className="w-64 h-64 rounded-3xl overflow-hidden border border-border-default shadow-2xl bg-cta-bg flex items-center justify-center group hover:border-brand-default transition-colors">
-                    <img 
-                      src="/assets/ITSLogo.png" 
-                      alt="International Translation Services Logo" 
-                      className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform"
-                      referrerPolicy="no-referrer"
-                    />
+
+                <div className="p-6 bg-cta-bg rounded-3xl border border-border-default shadow-sm space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-brand-default/10 rounded-2xl text-brand-default">
+                      <Award size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold">Certified Proficiency</h4>
+                      <p className="text-sm text-text-secondary">CEFR Standardized Assessment</p>
+                    </div>
+                  </div>
+                  <p className="text-text-secondary leading-relaxed">
+                    I hold a certified reading score of <a 
+                      href="https://www.efset.org/cert/xxxxxx" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-text-default font-bold underline decoration-brand-default underline-offset-4 hover:text-brand-default transition-colors"
+                      title="View EFSET Certification"
+                    >C1 Advanced</a> on the CEFR scale, ensuring high-accuracy translations.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -inset-4 bg-brand-default/5 rounded-[3rem] blur-2xl -z-10" />
+                <div className="bg-cta-bg rounded-[2.5rem] border border-border-default p-8 md:p-12 shadow-xl space-y-8">
+                  <div className="flex justify-center">
+                    <div className="w-48 h-48 rounded-3xl overflow-hidden border border-border-default shadow-lg bg-white flex items-center justify-center p-6 group hover:border-brand-default transition-colors">
+                      <img 
+                        src="/assets/ITSLogo.png" 
+                        alt="International Translation Services Logo" 
+                        className="w-full h-full object-contain group-hover:scale-110 transition-transform"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  </div>
+                  <div className="text-center space-y-4">
+                    <h3 className="text-xl font-bold">ITS Member</h3>
+                    <p className="text-text-secondary leading-relaxed">
+                      Proud member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>. Join us to access professional localization across dozens of languages.
+                    </p>
+                    <div className="pt-4">
+                      <div className="inline-flex items-center gap-2 text-brand-default font-bold">
+                        Explore ITS <ArrowRight size={16} />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
