@@ -58,7 +58,7 @@ const Home: React.FC = () => {
             Based in Ireland · Available for work
           </p>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-[1.05]">
-            Building things that <span className="text-brand-default">work</span> —{' '}
+            Building things that <span className="text-brand-default">work</span> -{' '}
             and look good doing it.
           </h1>
           <p className="text-xl text-text-secondary mb-10 leading-relaxed max-w-2xl">
