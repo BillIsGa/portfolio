@@ -27,7 +27,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight">
-              Building things that <span className="text-brand-default">work</span> — and look good doing it.
+              Building things that <span className="text-brand-default">work</span>, and look good doing it.
             </h1>
             <p className="text-xl text-text-secondary mb-10 leading-relaxed">
               I'm <span className="text-text-default font-medium">Billy</span>, a student based in Ireland with a focus on
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
             <span className="text-brand-default font-bold uppercase tracking-widest text-xs mb-4 block">Roblox</span>
             <h2 className="text-4xl font-bold mb-6">Localisation, Development & Design</h2>
             <p className="text-text-secondary text-lg mb-8 leading-relaxed">
-              I've contributed to games with over a billion combined visits — handling Chinese localisation,
+              I've contributed to games with over a billion combined visits, handling Chinese localisation,
               Luau scripting, and UI systems. If you're building something on Roblox and need a hand, I'm available for work.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -107,11 +107,11 @@ const Home: React.FC = () => {
               <p>
                 I'm <span className="text-text-default font-medium">Billy</span>, a student based in Ireland.
                 You might know me as <span className="text-text-default font-medium">Channers</span> on Discord
-                or <span className="text-text-default font-medium">VexorianDev</span> on Roblox.
+                or <span className="text-text-default font-medium">BiLLYGeGe2</span> on Roblox.
               </p>
               <p>
                 My work spans Chinese-English localisation, Roblox scripting and UI design, software development,
-                3D CAD modelling, and street photography. I tend to focus on the details — whether that's getting
+                3D CAD modelling, and street photography. I tend to focus on the details, whether that's getting
                 a translation to feel natural or making sure a UI actually makes sense to use.
               </p>
               <p>
@@ -152,7 +152,7 @@ const Home: React.FC = () => {
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Fluent in English and Mandarin Chinese, I localise games, apps, and UI content with a focus on tone and
-                cultural fit — not just word-for-word accuracy. Past work includes websites, Discord bots, and Roblox
+                cultural fit, not just word-for-word accuracy. Past work includes websites, Discord bots, and Roblox
                 games reaching hundreds of millions of players.
               </p>
             </div>
