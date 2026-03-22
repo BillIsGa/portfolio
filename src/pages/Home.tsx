@@ -86,7 +86,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight">
-              Building things that <span className="text-brand-default">work</span>, and look good doing it.
+              Building things that <span className="text-brand-default">work</span> and look good doing it.
             </h1>
             <p className="text-xl text-text-secondary mb-10 leading-relaxed">
               I'm <span className="text-text-default font-medium">Billy</span>, a student based in Ireland with a focus on
@@ -121,7 +121,7 @@ const Home: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* Featured Projects */}
+      {/* Featured Projects 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
         <div className="flex items-end justify-between mb-12">
           <div>
@@ -138,7 +138,7 @@ const Home: React.FC = () => {
           ))}
         </div>
       </section>
-
+*/}
       {/* Services Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
         <div className="mb-12">
