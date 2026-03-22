@@ -96,7 +96,7 @@ const Home: React.FC = () => {
                 to="/roblox"
                 className="bg-brand-default hover:bg-brand-hover text-white px-8 py-4 rounded-2xl font-semibold transition-all flex items-center gap-2 group"
               >
-                View My Work <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                Roblox <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </motion.div>
