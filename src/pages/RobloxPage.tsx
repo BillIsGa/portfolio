@@ -117,24 +117,23 @@ const RobloxPage: React.FC = () => {
                           Proud member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>. Join us to access professional localisation across dozens of languages.
                         </p>
                       </div>
-                      
-                      <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
-                        <a href="https://x.com/TranslationRBLX" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Twitter">
-                          <Twitter size={16} />
-                        </a>
-                        <a href="https://discord.gg/mXSCev9jUm" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Discord">
-                          <MessageSquare size={16} />
-                        </a>
-                        <a href="https://translationsrblx.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Website">
-                          <Globe size={16} />
-                        </a>
-                        <a href="https://cg.linkedin.com/company/international-translation-services" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS LinkedIn">
-                          <Linkedin size={16} />
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCgOQX_mSvYTCg9Q8unp6idA" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS YouTube">
-                          <Youtube size={16} />
-                        </a>
-                        <a href="https://translationsrblx.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-brand-default text-white rounded-xl text-xs font-bold hover:opacity-90 transition-opacity ml-auto sm:ml-0">
+    
+                      <div className="flex flex-wrap items-center justify-center sm:justify-between gap-3">
+                        <div className="flex items-center gap-3">
+                          <a href="https://x.com/TranslationRBLX" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Twitter">
+                            <Twitter size={16} />
+                          </a>
+                          <a href="https://translationsrblx.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Website">
+                            <Globe size={16} />
+                          </a>
+                          <a href="https://cg.linkedin.com/company/international-translation-services" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS LinkedIn">
+                            <Linkedin size={16} />
+                          </a>
+                          <a href="https://www.youtube.com/channel/UCgOQX_mSvYTCg9Q8unp6idA" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS YouTube">
+                            <Youtube size={16} />
+                          </a>
+                        </div>
+                        <a href="https://discord.gg/mXSCev9jUm" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-brand-default text-white rounded-xl text-xs font-bold hover:opacity-90 transition-opacity">
                           <span>Join ITS</span>
                           <ArrowRight size={14} />
                         </a>
