@@ -72,7 +72,7 @@ const RobloxPage: React.FC = () => {
                     Bridging the gap with <span className="text-brand-default">Chinese Localisation</span>
                   </h2>
                   <p className="text-xl text-text-secondary leading-relaxed">
-                    I specialize in Chinese and bring extensive experience in providing localization services that ensure cultural resonance and player retention.
+                    I specialise in Chinese and bring extensive experience in providing localisation services that ensure cultural resonance and player retention.
                   </p>
                 </div>
 
@@ -83,7 +83,7 @@ const RobloxPage: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-bold">Certified Proficiency</h4>
-                      <p className="text-sm text-text-secondary">CEFR Standardized Assessment</p>
+                      <p className="text-sm text-text-secondary">CEFR Standardised Assessment</p>
                     </div>
                   </div>
                   <p className="text-text-secondary leading-relaxed">
@@ -114,7 +114,7 @@ const RobloxPage: React.FC = () => {
                   <div className="text-center space-y-4">
                     <h3 className="text-xl font-bold">ITS Member</h3>
                     <p className="text-text-secondary leading-relaxed">
-                      Proud member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>. Join us to access professional localization across dozens of languages.
+                      Proud member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>. Join us to access professional localisation across dozens of languages.
                     </p>
                     <div className="pt-4">
                       <div className="inline-flex items-center gap-2 text-brand-default font-bold">
