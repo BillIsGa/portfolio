@@ -535,9 +535,6 @@ const RobloxPage: React.FC = () => {
                 </button>
               ))}
             </div>
-            <div className="text-text-secondary text-sm font-medium">
-              Showing {activeTab === 'All' ? 'Full Library' : `${activeTab} Services`}
-            </div>
           </div>
 
           {/* Dynamic Tab Content */}
