@@ -10,10 +10,10 @@ const Home: React.FC = () => {
   const featuredProjects = PROJECTS.filter(p => featuredIds.includes(p.id));
 
   const services = [
-    { icon: <Globe size={24} />, title: 'Translation', desc: 'Professional Chinese-English localisation for apps and docs.' },
-    { icon: <Code size={24} />, title: 'Roblox', desc: 'Full-stack Roblox services: Localisation, Dev & Design.' },
-    { icon: <Box size={24} />, title: 'Engineering', desc: 'Software development and technical systems.' },
-    { icon: <Camera size={24} />, title: 'Photography', desc: 'Urban street photography and urban life.' },
+    { icon: <Globe size={24} />, title: 'Translation', desc: 'Chinese-English localisation for games, apps, and digital platforms.' },
+    { icon: <Code size={24} />, title: 'Roblox', desc: 'Localisation, Luau scripting, UI design, and avatar clothing.' },
+    { icon: <Box size={24} />, title: 'Engineering', desc: 'Software development, CAD modelling, and technical systems.' },
+    { icon: <Camera size={24} />, title: 'Photography', desc: 'Street and urban photography across Ireland.' },
   ];
 
   return (
@@ -27,11 +27,11 @@ const Home: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight">
-              Designing <span className="text-brand-default">digital</span> experiences with precision.
+              Building things that <span className="text-brand-default">work</span> — and look good doing it.
             </h1>
             <p className="text-xl text-text-secondary mb-10 leading-relaxed">
-              I'm <span className="text-text-default font-medium">Billy</span>, a designer, developer, and translator based in Ireland. 
-              I combine creative and technical skills to produce clear, user-focused digital work.
+              I'm <span className="text-text-default font-medium">Billy</span>, a student based in Ireland with a focus on
+              localisation, Roblox development, and software engineering. I like solving real problems and building things people actually use.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -45,30 +45,11 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight mb-2">Featured Projects</h2>
-            <p className="text-text-secondary">A selection of my recent work across various disciplines.</p>
-          </div>
-          <Link to="/roblox" className="text-brand-default hover:text-brand-hover font-medium flex items-center gap-1">
-            View all <ArrowRight size={16} />
-          </Link>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-      </section>
-
       {/* Services Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
         <div className="mb-12">
-          <h2 className="text-3xl font-bold tracking-tight mb-2">Services</h2>
-          <p className="text-text-secondary">Specialised solutions for digital platforms and global markets.</p>
+          <h2 className="text-3xl font-bold tracking-tight mb-2">What I Do</h2>
+          <p className="text-text-secondary">A range of services across digital platforms and creative disciplines.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
@@ -94,14 +75,15 @@ const Home: React.FC = () => {
             <Code size={200} />
           </div>
           <div className="relative z-10 max-w-2xl">
-            <span className="text-brand-default font-bold uppercase tracking-widest text-xs mb-4 block">Roblox Specialisation</span>
-            <h2 className="text-4xl font-bold mb-6">Expert Roblox Development & Localisation</h2>
+            <span className="text-brand-default font-bold uppercase tracking-widest text-xs mb-4 block">Roblox</span>
+            <h2 className="text-4xl font-bold mb-6">Localisation, Development & Design</h2>
             <p className="text-text-secondary text-lg mb-8 leading-relaxed">
-              I provide end-to-end services for Roblox creators, from complex Luau scripting and UI design to full Chinese-English localisation for global reach.
+              I've contributed to games with over a billion combined visits — handling Chinese localisation,
+              Luau scripting, and UI systems. If you're building something on Roblox and need a hand, I'm available for work.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/roblox" className="bg-brand-default text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-hover transition-colors">
-                Explore Roblox
+                Roblox Portfolio
               </Link>
               <Link to="/engineering" className="bg-button-bg-transparent text-text-default px-6 py-3 rounded-xl font-semibold hover:bg-button-bg-transparent-hover transition-colors">
                 Engineering Projects
@@ -123,19 +105,20 @@ const Home: React.FC = () => {
             <h2 className="text-4xl font-bold tracking-tight mb-8">About Me</h2>
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
               <p>
-                Hello! I'm <span className="text-text-default font-medium">Billy</span>, a designer, developer, and translator based in Ireland. 
-                I am also known as <span className="text-text-default font-medium">Channers (unknown_games)</span> on Discord, 
-                and <span className="text-text-default font-medium">VexorianDev (BiLLYGeGe2)</span> on Roblox.
+                I'm <span className="text-text-default font-medium">Billy</span>, a student based in Ireland.
+                You might know me as <span className="text-text-default font-medium">Channers</span> on Discord
+                or <span className="text-text-default font-medium">VexorianDev</span> on Roblox.
               </p>
               <p>
-                I work across Chinese-English translation and localisation, UI/UX design, programming, 3D CAD modelling, and photography. 
-                My approach combines creative and technical skills to produce clear, user-focused digital work.
+                My work spans Chinese-English localisation, Roblox scripting and UI design, software development,
+                3D CAD modelling, and street photography. I tend to focus on the details — whether that's getting
+                a translation to feel natural or making sure a UI actually makes sense to use.
               </p>
               <p>
-                Whether it's localising a game for a global audience or scripting complex systems in Roblox, 
-                I focus on tone, consistency, and intuitive design.
+                I'm always working on something new, and I'm open to freelance work and collaborations
+                that are actually interesting.
               </p>
-              
+
               <div className="pt-8 border-t border-border-default">
                 <h3 className="text-text-default font-bold mb-4">Connect with me</h3>
                 <div className="flex gap-4">
@@ -168,8 +151,9 @@ const Home: React.FC = () => {
                 <span className="text-brand-default">🌐</span> Translation & Localisation
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Proficient in English and Mandarin Chinese, I specialise in localisation for games, apps, and UI content. 
-                I’ve translated projects such as websites, Discord bots and video games, with a strong focus on tone, consistency, and layout-fit.
+                Fluent in English and Mandarin Chinese, I localise games, apps, and UI content with a focus on tone and
+                cultural fit — not just word-for-word accuracy. Past work includes websites, Discord bots, and Roblox
+                games reaching hundreds of millions of players.
               </p>
             </div>
 
@@ -178,8 +162,8 @@ const Home: React.FC = () => {
                 <span className="text-brand-default">🖥️</span> Development
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Over time, I’ve developed my skills in Roblox Studio, where I specialise in scripting and UI design - 
-                creating everything from intuitive interfaces to complex game mechanics, such as vehicles or phone GUI systems.
+                I specialise in Roblox Studio scripting and UI design, building everything from phone GUI systems to
+                vehicle mechanics. I also have experience in web development and general software engineering.
               </p>
             </div>
 
@@ -188,8 +172,8 @@ const Home: React.FC = () => {
                 <span className="text-brand-default">🧊</span> 3D Modelling & CAD
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Using SolidWorks, I create mechanical parts, assemblies, and technical drawings. 
-                I also have basic experience with Blender for low-poly game assets and mesh optimisation.
+                I use SolidWorks for mechanical parts, assemblies, and technical drawings.
+                I also dabble in Blender for low-poly game assets when needed.
               </p>
             </div>
 
@@ -198,8 +182,8 @@ const Home: React.FC = () => {
                 <span className="text-brand-default">📸</span> Photography
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                I am an amateur street photographer mainly using an original Sony CyberShot DSC-RX100 Mark I, 
-                primarily focusing on emergency service units and other aspects of urban and rural life.
+                Amateur street photographer shooting mostly on a Sony CyberShot DSC-RX100 Mark I.
+                I focus on emergency services, transport, and everyday urban life in Ireland.
               </p>
             </div>
           </motion.div>
@@ -224,25 +208,25 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-border-default group">
-              <img 
-                src="https://picsum.photos/seed/street1/800/1000" 
-                alt="Street Photography 1" 
+              <img
+                src="https://picsum.photos/seed/street1/800/1000"
+                alt="Street Photography 1"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-border-default group">
-              <img 
-                src="https://picsum.photos/seed/street2/800/1000" 
-                alt="Street Photography 2" 
+              <img
+                src="https://picsum.photos/seed/street2/800/1000"
+                alt="Street Photography 2"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-border-default group">
-              <img 
-                src="https://picsum.photos/seed/street3/800/1000" 
-                alt="Street Photography 3" 
+              <img
+                src="https://picsum.photos/seed/street3/800/1000"
+                alt="Street Photography 3"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
