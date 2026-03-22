@@ -61,41 +61,47 @@ const RobloxPage: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-16"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-4xl mx-auto text-center space-y-12 py-12">
               <div className="space-y-6">
-                <h2 className="text-3xl font-bold tracking-tight">Professional Localisation</h2>
-                <p className="text-text-secondary text-lg leading-relaxed">
-                  I provide high-end <span className="text-text-default font-semibold">Chinese-English translation</span> services, specialising in the Roblox platform. With a <span className="text-brand-default font-bold">C1 Advanced</span> certification in English and native-level Mandarin proficiency, I ensure your game resonates with global audiences.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="p-4 bg-cta-bg rounded-2xl border border-border-default">
-                    <h4 className="font-bold text-brand-default mb-1">C1 Certified</h4>
-                    <p className="text-xs text-text-secondary">Advanced proficiency in English for complex technical and creative content.</p>
-                  </div>
-                  <div className="p-4 bg-cta-bg rounded-2xl border border-border-default">
-                    <h4 className="font-bold text-brand-default mb-1">International Reach</h4>
-                    <p className="text-xs text-text-secondary">Helping games scale to millions of players across diverse cultural regions.</p>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+                  I specialize in Chinese and bring experience in providing localization services.
+                </h2>
+                <div className="flex justify-center py-4">
+                  <div className="p-3 bg-cta-bg rounded-xl border border-border-default shadow-sm">
+                    <Languages className="text-brand-default" size={32} />
                   </div>
                 </div>
-                <p className="text-text-secondary">
-                  My services go beyond simple word-for-word translation. I focus on <span className="italic">cultural adaptation</span>, ensuring slang, UI constraints, and game mechanics feel native to the target audience.
-                </p>
+                <h3 className="text-2xl md:text-3xl font-semibold text-text-secondary">
+                  Additionally, I hold a certified reading score of <span className="text-text-default underline decoration-brand-default underline-offset-8">C1 Advanced</span> on the CEFR scale.
+                </h3>
               </div>
-              <div className="rounded-[2.5rem] overflow-hidden border border-border-default shadow-xl">
-                <img 
-                  src="https://picsum.photos/seed/translation-ui/800/600" 
-                  alt="Translation Interface" 
-                  className="w-full h-auto"
-                  referrerPolicy="no-referrer"
-                />
+
+              <div className="pt-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-left border-t border-border-default">
+                <div className="space-y-6">
+                  <p className="text-xl text-text-secondary leading-relaxed">
+                    I am also a member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>, which you can join to access localization services from various languages!
+                  </p>
+                </div>
+                <div className="flex justify-center md:justify-end">
+                  <div className="w-64 h-64 rounded-3xl overflow-hidden border border-border-default shadow-2xl bg-cta-bg flex items-center justify-center group hover:border-brand-default transition-colors">
+                    <img 
+                      src="/assets/ITSLogo.png" 
+                      alt="International Translation Services Logo" 
+                      className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold mb-8">Localisation Portfolio</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="flex flex-wrap justify-center gap-6">
                 {projects.filter(p => p.tags.includes('Localisation')).map((project) => (
-                  <ProjectCard key={project.id} project={project} />
+                  <div key={project.id} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] max-w-[320px]">
+                    <ProjectCard project={project} />
+                  </div>
                 ))}
               </div>
             </div>
