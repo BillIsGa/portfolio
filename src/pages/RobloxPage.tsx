@@ -304,17 +304,6 @@ const RobloxPage: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            <div className="pt-12 border-t border-border-default">
-              <h3 className="text-2xl font-bold mb-8">Clothing Portfolio</h3>
-              <div className="flex flex-wrap justify-center gap-6">
-                {projects.filter(p => p.tags.includes('Clothing')).map((project) => (
-                  <div key={project.id} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] max-w-[320px]">
-                    <ProjectCard project={project} />
-                  </div>
-                ))}
-              </div>
-            </div>
           </motion.div>
         );
       default:
