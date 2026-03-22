@@ -99,10 +99,10 @@ const RobloxPage: React.FC = () => {
               </div>
 
               <div className="relative">
-                <div className="absolute -inset-4 -z-10" />
-                <div className="bg-cta-bg rounded-[2.5rem] p-8 md:p-12 space-y-8">
-                  <div className="flex justify-center">
-                    <div className="w-48 h-48 overflow-hidden flex items-center justify-center p-6 group hover:border-brand-default transition-colors">
+                <div className="absolute -inset-4 bg-brand-default/5 rounded-[3rem] blur-2xl -z-10" />
+                <div className="bg-cta-bg rounded-[2.5rem] border border-border-default p-8 shadow-xl">
+                  <div className="flex flex-col sm:flex-row items-center gap-8">
+                    <div className="w-32 h-32 shrink-0 overflow-hidden flex items-center justify-center p-4 group hover:border-brand-default transition-colors">
                       <img 
                         src="/assets/ITSLogo.png" 
                         alt="International Translation Services Logo" 
@@ -110,12 +110,29 @@ const RobloxPage: React.FC = () => {
                         referrerPolicy="no-referrer"
                       />
                     </div>
-                  </div>
-                  <div className="text-center space-y-4">
-                    <p className="text-text-secondary leading-relaxed">
-                      Proud member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>. Join us to access professional localisation across dozens of languages.
-                    </p>
-                    <div className="pt-4">
+                    <div className="flex-1 space-y-4 text-center sm:text-left">
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-bold">ITS Member</h3>
+                        <p className="text-text-secondary text-sm leading-relaxed">
+                          Proud member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>. Join us to access professional localization across dozens of languages.
+                        </p>
+                      </div>
+                      
+                      <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Twitter">
+                          <Twitter size={16} />
+                        </a>
+                        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Discord">
+                          <MessageSquare size={16} />
+                        </a>
+                        <a href="https://its.example.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Website">
+                          <Globe size={16} />
+                        </a>
+                        <a href="#" className="flex items-center gap-2 px-4 py-2 bg-brand-default text-white rounded-xl text-xs font-bold hover:opacity-90 transition-opacity ml-auto sm:ml-0">
+                          <span>Join ITS</span>
+                          <ArrowRight size={14} />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
