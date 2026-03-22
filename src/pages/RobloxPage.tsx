@@ -420,17 +420,17 @@ const RobloxPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <p className="text-text-secondary text-lg leading-relaxed">
-                I am a <span className="text-text-default font-semibold">Roblox Platform Specialist</span> providing a full suite of services from high-end localisation to technical GUI development and avatar asset design.
+                I've contributed to some of the biggest games on the platform, providing <span className="text-text-default font-semibold">Chinese localisation</span>, Luau scripting, and custom avatar clothing.
               </p>
               <div className="flex items-start gap-4 p-6 bg-cta-bg rounded-3xl border border-border-default">
-                <Award className="text-brand-default shrink-0" size={24} />
+                <Users className="text-brand-default shrink-0" size={24} />
                 <div>
-                  <h3 className="font-bold mb-1">Platform Expertise</h3>
-                  <p className="text-text-secondary text-sm mb-3">Deep understanding of the Roblox ecosystem, Luau scripting, and community trends.</p>
+                  <h3 className="font-bold mb-1">Proven Track Record</h3>
+                  <p className="text-text-secondary text-sm">Work spanning games with over a billion combined visits, serving players across dozens of regions.</p>
                 </div>
               </div>
               <p className="text-text-secondary leading-relaxed">
-                Whether it's making your game accessible to millions of Chinese players or building realistic UI systems, I help creators scale their experiences.
+                I take pride in quality over quantity — every project gets the same attention to detail regardless of scope.
               </p>
             </div>
 
