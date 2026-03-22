@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 import { ProjectCard } from '../components/ProjectCard';
-import { Globe, Languages, Layout, Award, Users, RefreshCw, ExternalLink, Code2, Shirt, ArrowRight, Twitter, MessageSquare } from 'lucide-react';
+import { Globe, Languages, Layout, Award, Users, RefreshCw, ExternalLink, Code2, Shirt, ArrowRight, Twitter, MessageSquare, Linkedin, Youtube } from 'lucide-react';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { Project } from '../types';
 
@@ -102,7 +102,7 @@ const RobloxPage: React.FC = () => {
                 <div className="absolute -inset-4 bg-brand-default/5 rounded-[3rem] blur-2xl -z-10" />
                 <div className="bg-cta-bg rounded-[2.5rem] border border-border-default p-8 shadow-xl">
                   <div className="flex flex-col sm:flex-row items-center gap-8">
-                    <div className="w-32 h-32 shrink-0 rounded-2xl overflow-hidden border border-border-default shadow-md bg-white flex items-center justify-center p-4 group hover:border-brand-default transition-colors">
+                    <div className="w-32 h-32 shrink-0 flex items-center justify-center group transition-colors">
                       <img 
                         src="/assets/ITSLogo.png" 
                         alt="International Translation Services Logo" 
@@ -119,16 +119,22 @@ const RobloxPage: React.FC = () => {
                       </div>
                       
                       <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Twitter">
+                        <a href="https://x.com/TranslationRBLX" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Twitter">
                           <Twitter size={16} />
                         </a>
-                        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Discord">
+                        <a href="https://discord.gg/mXSCev9jUm" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Discord">
                           <MessageSquare size={16} />
                         </a>
-                        <a href="https://its.example.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Website">
+                        <a href="https://translationsrblx.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS Website">
                           <Globe size={16} />
                         </a>
-                        <a href="#" className="flex items-center gap-2 px-4 py-2 bg-brand-default text-white rounded-xl text-xs font-bold hover:opacity-90 transition-opacity ml-auto sm:ml-0">
+                        <a href="https://cg.linkedin.com/company/international-translation-services" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS LinkedIn">
+                          <Linkedin size={16} />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCgOQX_mSvYTCg9Q8unp6idA" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-border-default hover:border-brand-default hover:text-brand-default transition-all" title="ITS YouTube">
+                          <Youtube size={16} />
+                        </a>
+                        <a href="https://translationsrblx.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-brand-default text-white rounded-xl text-xs font-bold hover:opacity-90 transition-opacity ml-auto sm:ml-0">
                           <span>Join ITS</span>
                           <ArrowRight size={14} />
                         </a>
