@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const featuredProjects = PROJECTS.filter(p => featuredIds.includes(p.id));
 
   const stats = [
-    { value: '1B+', label: 'visits across localised games' },
+    { value: '7B+', label: 'visits across localised projects' },
     { value: '10+', label: 'shipped projects' },
     { value: 'C1', label: 'certified English proficiency' },
     { value: '2+', label: 'years of experience' },
