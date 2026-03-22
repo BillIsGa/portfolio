@@ -24,7 +24,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
       </div>
       
-      <div className="p-6">
+      <div className="p-6 flex flex-col h-full">
         <div className="flex items-center justify-between mb-3">
           <div />
           {project.visits && (
@@ -33,11 +33,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </span>
           )}
         </div>
-        <h3 className="text-lg font-semibold mb-1 group-hover:text-brand-default transition-colors">
-          {project.title}
-        </h3>
+        <div className="h-12 mb-1 flex items-start">
+          <h3 className={`font-semibold group-hover:text-brand-default transition-colors line-clamp-2 leading-tight ${
+            project.title.length > 35 ? 'text-sm' : project.title.length > 20 ? 'text-base' : 'text-lg'
+          }`}>
+            {project.title}
+          </h3>
+        </div>
         {project.author && (
-          <p className="text-xs text-text-secondary mb-3">by {project.author}</p>
+          <p className="text-xs text-text-secondary mb-3 truncate">by {project.author}</p>
         )}
         <div className="flex flex-wrap gap-2 mt-auto">
           {project.tags.map((tag) => (
