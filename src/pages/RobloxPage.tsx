@@ -102,7 +102,7 @@ const RobloxPage: React.FC = () => {
                 <div className="absolute -inset-4 bg-brand-default/5 rounded-[3rem] blur-2xl -z-10" />
                 <div className="bg-cta-bg rounded-[2.5rem] border border-border-default p-8 md:p-12 shadow-xl space-y-8">
                   <div className="flex justify-center">
-                    <div className="w-48 h-48 rounded-3xl overflow-hidden border border-border-default shadow-lg bg-white flex items-center justify-center p-6 group hover:border-brand-default transition-colors">
+                    <div className="w-48 h-48 overflow-hidden flex items-center justify-center p-6 group hover:border-brand-default transition-colors">
                       <img 
                         src="/assets/ITSLogo.png" 
                         alt="International Translation Services Logo" 
@@ -112,7 +112,6 @@ const RobloxPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="text-center space-y-4">
-                    <h3 className="text-xl font-bold">ITS Member</h3>
                     <p className="text-text-secondary leading-relaxed">
                       Proud member of George Gaitanis's <span className="text-text-default font-bold">International Translation Services</span>. Join us to access professional localisation across dozens of languages.
                     </p>
