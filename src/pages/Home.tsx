@@ -35,7 +35,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight">
-              Building things that <span className="text-brand-default">work</span> — and look good doing it.
+              Building things that <span className="text-brand-default">work</span>, and look good doing it.
             </h1>
             <p className="text-xl text-text-secondary mb-10 leading-relaxed">
               I'm <span className="text-text-default font-medium">Billy</span>, a student based in Ireland with a focus on
@@ -130,7 +130,7 @@ const Home: React.FC = () => {
               </p>
               <p>
                 My work spans Chinese-English localisation, Roblox scripting and UI design, software development,
-                3D CAD modelling, and street photography. I tend to focus on the details — whether that's getting
+                3D CAD modelling, and street photography. I tend to focus on the details, whether that's getting
                 a translation to feel natural or making sure a UI actually makes sense to use.
               </p>
               <p>
@@ -171,7 +171,7 @@ const Home: React.FC = () => {
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Fluent in English and Mandarin Chinese, I localise games, apps, and UI content with a focus on tone and
-                cultural fit — not just word-for-word accuracy. Past work includes websites, Discord bots, and Roblox
+                cultural fit, not just word-for-word accuracy. Past work includes websites, Discord bots, and Roblox
                 games reaching hundreds of millions of players.
               </p>
             </div>
