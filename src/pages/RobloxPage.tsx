@@ -364,12 +364,14 @@ const RobloxPage: React.FC = () => {
         let numericVisits = p.numericVisits || 0;
         let visitsStr = p.visits || '0';
         let imageUrl = p.imageUrl;
+        let author = p.author;
         let isLive = false;
 
         if (live) {
           numericVisits = live.visits;
           visitsStr = live.visits.toLocaleString();
           imageUrl = live.iconUrl || p.imageUrl;
+          author = live.creator || p.author;
           isLive = true;
         } else if (p.visits) {
           numericVisits = parseVisits(p.visits);
@@ -382,6 +384,7 @@ const RobloxPage: React.FC = () => {
           visits: visitsStr,
           numericVisits,
           imageUrl,
+          author,
           isLive
         };
       });
