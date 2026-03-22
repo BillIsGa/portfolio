@@ -88,7 +88,7 @@ const RobloxPage: React.FC = () => {
                   </div>
                   <p className="text-text-secondary leading-relaxed">
                     I hold a certified reading score of <a 
-                      href="https://www.efset.org/cert/xxxxxx" 
+                      href="https://cert.efset.org/srrbM1" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-text-default font-bold underline decoration-brand-default underline-offset-4 hover:text-brand-default transition-colors"
@@ -99,8 +99,8 @@ const RobloxPage: React.FC = () => {
               </div>
 
               <div className="relative">
-                <div className="absolute -inset-4 bg-brand-default/5 rounded-[3rem] blur-2xl -z-10" />
-                <div className="bg-cta-bg rounded-[2.5rem] border border-border-default p-8 md:p-12 shadow-xl space-y-8">
+                <div className="absolute -inset-4 -z-10" />
+                <div className="bg-cta-bg rounded-[2.5rem] p-8 md:p-12 space-y-8">
                   <div className="flex justify-center">
                     <div className="w-48 h-48 overflow-hidden flex items-center justify-center p-6 group hover:border-brand-default transition-colors">
                       <img 
