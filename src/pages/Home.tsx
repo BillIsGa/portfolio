@@ -279,7 +279,7 @@ const Home: React.FC = () => {
               See more <ArrowRight size={16} />
             </Link>
           </div>
-
+{/*}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-border-default group">
               <img
@@ -301,6 +301,7 @@ const Home: React.FC = () => {
           <p className="text-center text-text-secondary mt-6 text-sm italic">
             Mainly using a Sony CyberShot DSC-RX100 Mark I.
           </p>
+          */}
         </motion.div>
       </section>
 
